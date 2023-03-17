@@ -1,0 +1,85 @@
+.bottom-information-body{
+    margin-top: 80px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #2d2d2d;
+    width: 100%;
+    height: auto;
+}
+
+/*回到顶部*/
+.title-img{
+    padding-bottom: 30px;
+}
+.title-img img{
+    width: 40px;
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+.title-img img:hover{
+    opacity: 1;
+    transition: all 0.2s;
+    transform: scale(1.2,1.2);
+}
+.to-top img{
+    width: 40px;
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+.to-top img:hover{
+    opacity: 1;
+    transition: all 0.2s;
+    transform: scale(1.1,1.1);
+}
+
+
+
+
+/*信息*/
+.lieming h4{
+    color: #dadada;
+    font-size: 0.9em;
+}
+.lianxi-information h4{
+    padding-left: 30px;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+/*资源*/
+.ziyuan-body a{
+    display: block;
+    color: white;
+    font-size: 0.9em;
+    /*text-decoration: none;*/
+    transition: all 0.2s;
+}
+.ziyuan-body a:hover{
+    color: rgb(24, 132, 253);
+    transition: all 0.2s;
+}
+
+/*隐私条款*/
+.bottom-information-end-body{
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.bottom-information-end-body a{
+    transition: all 0.2s;
+    color: white;
+    font-size: 0.7em;
+    /*padding-left: 10px;*/
+}
+.bottom-information-end-body a:hover{
+    color: rgb(24, 132, 253);
+    transition: all 0.2s;
+}
+
+.bottom-information-img img{
+    width: 90px;
+}
+
+

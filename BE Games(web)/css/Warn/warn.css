@@ -1,0 +1,54 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(15, 15, 15);
+    height: 100%;
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.content img{
+    width: 100px;
+}
+.content h1{
+    color: white;
+    font-size: 2.7em;
+    font-weight: 500;
+}
+
+.button{
+    transition: all 0.2s;
+    width: 170px;
+    height: 50px;
+    background-color: #0777ff;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover{
+    background-color: #208bff;
+    transition: all 0.2s;
+}
+
+.fanhui{
+    padding-top: 25px;
+}
+.fanhui a{
+    color: white;
+}
+.fanhui a:hover{
+    text-decoration: none;
+}

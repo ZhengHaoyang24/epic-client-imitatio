@@ -1,0 +1,333 @@
+.store_content_div {
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    /*border: 1px solid red;*/
+}
+
+/*轮播图*/
+.carousel-item img{
+    /*border-radius: 10px;*/
+}
+.active_change_img>img{
+    border-radius: 10px;
+}
+
+/*切换效果*/
+.active_change {
+    background-color: #323232;
+}
+.Store_carousel_change_div {
+    /*width: 75%;*/
+    display: flex;
+}
+
+.carousel_div {
+    width: 75%;
+}
+
+/*切换*/
+.Store_change_carousel {
+    width: 25%;
+    /*height: 100%;*/
+    height: auto;
+    /*margin-left: 1%;*/
+}
+
+@media screen and (max-width: 800px) {
+    .carousel_div {
+        width: 100%;
+    }
+
+    .Store_change_carousel {
+        display: none;
+    }
+}
+
+
+.my_carousel-indicators {
+
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+}
+
+.my_carousel-indicators div {
+    transition: all 0.3s;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*margin-left: 0;*/
+    width: 86%;
+    margin-left: 7%;
+    cursor: pointer;
+    /*border: 1px white solid;*/
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.my_carousel-indicators div:hover {
+    background-color: #323232;
+}
+
+.my_carousel-indicators img {
+    width: 25%;
+    /*height: 80%;*/
+
+}
+
+@media screen and (max-width: 1000px) {
+    .my_carousel-indicators img {
+        display: none;
+    }
+}
+
+
+
+/**/
+/*特惠*/
+/**/
+.tehui_div {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.tehui_div h4 {
+    display: block;
+    padding-top: 20px;
+    font-size: 1.3em;
+    color: #ffffff;
+}
+
+.tehui_div a{
+    text-decoration: none;
+}
+
+.tehui_content_div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*卡片*/
+.card {
+    padding: 10px;
+    background-color: rgb(15,15,15);
+    /*position: relative;*/
+    display: inline-block;
+}
+.card img{
+    border-radius: 7px;
+    transition: all 0.2s;
+}
+.card img:hover {
+    transform: scale(1.02, 1.02);
+    transition: all 0.2s;
+    box-shadow: 4px 4px 7px rgb(61, 61, 61), -4px -4px 7px rgb(42, 42, 42);
+}
+
+/*.cover_span {*/
+/*    !*transition: all 0.6s;*!*/
+/*    position: absolute;*/
+/*    margin-top: 0;*/
+/*    top: 3%;*/
+/*    bottom: 29%;*/
+/*    left: 3%;*/
+/*    right: 4%;*/
+/*    background: rgba(255, 255, 255, 0.07);*/
+/*    display: none;*/
+/*    z-index: 22;*/
+/*}*/
+/*.card img:hover + .cover_span{*/
+/*    !*transition: all 0.6s;*!*/
+/*    display: block;*/
+/*}*/
+
+
+.card-body {
+    padding: 10px;
+    background-color: rgb(15,15,15);
+    border: 0px;
+}
+
+.card-body h5 {
+    color: white;
+    padding-top: 0px;
+    font-size: 1em;
+
+}
+
+.card-button-price-body {
+    /*border: 1px red solid;*/
+    display: flex;
+    align-items: center;
+    /*vertical-align: center;*/
+    width: auto;
+    height: 40px;
+}
+
+.card-button-price-body h6 {
+    font-size: 1em;
+    /*vertical-align: center;*/
+    color: white;
+    /*line-height: 40px;*/
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+}
+
+/*按钮*/
+.card-button-price-body > button {
+    border-radius: 7px;
+    height: 100%;
+    color: white;
+    background-color: rgb(0, 107, 230);
+    border: 0;
+}
+
+.card-button-price-body > button:hover {
+    background-color: rgb(26, 130, 255);
+}
+
+.card-button-price-body > button:active {
+    /*box-sizing: border-box;*/
+    border: 1px white solid;
+}
+
+@media screen and (max-width: 1300px) {
+    .tehui_content_div div:nth-child(6) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .tehui_content_div div:nth-child(5) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .tehui_content_div div:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tehui_content_div div:nth-child(3) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .tehui_content_div div:nth-child(2) {
+        display: none;
+    }
+}
+
+
+
+
+
+
+/**/
+/*免费游戏*/
+/**/
+.freegmae-body{
+    padding: 25px;
+    width: 100%;
+    height: auto;
+    background-color: #2d2d2d;
+    margin-top: 30px;
+}
+/*标题*/
+.freegmae-title-body{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+.freegmae-title-body>img{
+    width: 40px;
+}
+.freegmae-title-body>h4{
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+    color: white;
+}
+/*内容*/
+.freegmae-con-body{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    /*border: 1px red solid;*/
+}
+.freegmae-con-img{
+    position: relative;
+    width: 49%;
+    /*background-color: #5bc0de;*/
+}
+.freegmae-con-img img{
+    width: 100%;
+    border-top-left-radius:5px ;
+    border-top-right-radius:5px ;
+}
+.freegmae-con-img img:hover{
+    opacity:0.6;
+}
+
+
+/*现在免费*/
+.xianzaimianfei{
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 107, 230);
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    padding: 3px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.freegmae-con-time-1 h4{
+    font-size: 1.3em;
+    color: white;
+    padding-top: 30px;
+}
+.freegmae-con-time-1{
+    font-size: 1em;
+    color: #c9c9c9;
+}
+.freegmae-con-time-2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    color: #ffffff;
+    padding-top: 30px;
+}
+
+
+
+/*神秘游戏*/
+.shenmiyouxi{
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    padding: 3px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

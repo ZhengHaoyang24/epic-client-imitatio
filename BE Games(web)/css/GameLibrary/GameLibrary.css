@@ -1,0 +1,306 @@
+/* */
+/* */
+/*游戏库*/
+/* */
+/* */
+
+.library_content_div {
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    /*border: 1px solid red;*/
+}
+
+
+/*顶部*/
+.library-top{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /*border: 1px solid #eee5e5;*/
+}
+
+/*排序方式*/
+.paixu-style{
+    height: 100%;
+    /*padding-top: 10px;*/
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.paixu-style>h4{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 0.9em;
+}
+.paixu-style select{
+    width: 90px;
+    appearance: none;
+    cursor: pointer;
+    color: #acacac;
+    font-size: 0.9em;
+    background-color: rgb(15,15,15);
+    border: 0;
+    outline: none;
+}
+.paixu-style>select:hover{
+    color: white;
+}
+.paixu-style select uption{
+    border: 0;
+}
+/*刷新*/
+.shuaxin{
+    width: 40px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+.shuaxin:hover{
+    background-color: #4c4c4c;
+    border-radius: 10px;
+}
+.shuaxin img{
+    cursor: pointer;
+    animation:fadenum 3s infinite;
+    width: 20px;
+}
+/*刷新动画*/
+@keyframes fadenum{
+    100%{transform:rotate(360deg);}
+}
+
+/*游戏库内容*/
+.library_body{
+    width: 100%;
+    /*border: 1px solid #00ebff;*/
+    display: flex;
+}
+/*左边*/
+.library_body_list{
+    display: flex;
+    /*justify-content: space-evenly;*/
+    flex-wrap: wrap;
+    width: 100%;
+    /*border: 1px solid #8b812a;*/
+}
+
+/*图片hover效果*/
+.list-img:hover{
+    background-color: #2b2b2b;
+    border-radius: 10px;
+}
+.list-img h5{
+    font-size: 1em;
+    color: white;
+    padding-top: 5px;
+}
+/*下载或者安装*/
+.list-img-bottom{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #bfbfbf;
+    font-size: 1em;
+    display: flex;
+}
+.list-img-bottom img{
+    margin-right: 10px;
+}
+
+/*右边div*/
+.library_body_dropdown{
+    width: 220px;
+    height: 100%;
+    /*border: 1px solid #0d10bf;*/
+}
+.library_body_dropdown>h5{
+    color: white;
+    font-size: 1em;
+}
+
+
+@media screen and (max-width: 5000px) {
+    .list-img{
+        width: 20%;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 23px;
+    }
+    .list-img img{
+        width: 100%;
+    }
+    .list-img:hover{
+        background-color: #2b2b2b;
+        border-radius: 10px;
+    }
+    .library_body_dropdown{
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .list-img{
+        width: 25%;
+        padding-top: 17px;
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+    .list-img img{
+        width: 100%;
+    }
+    .list-img:hover{
+        background-color: #2b2b2b;
+        border-radius: 15px;
+    }
+    .library_body_dropdown{
+        padding-top: 17px;
+        padding-left: 17px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .list-img{
+        width: 33%;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .list-img img{
+        width: 100%;
+    }
+    .list-img:hover{
+        background-color: #2b2b2b;
+        border-radius: 20px;
+    }
+    .library_body_dropdown{
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .list-img{
+        width: 50%;
+        padding-top: 23px;
+        padding-left: 23px;
+        padding-right: 23px;
+
+    }
+    .list-img img{
+        width: 100%;
+    }
+    .list-img:hover{
+        background-color: #2b2b2b;
+        border-radius: 20px;
+    }
+    .library_body_dropdown{
+        padding-top: 23px;
+        padding-left: 23px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .list-img{
+        width: 100%;
+        padding-top: 26px;
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+    .list-img img{
+        width: 100%;
+    }
+    .list-img:hover{
+        background-color: #2b2b2b;
+        border-radius: 25px;
+    }
+    .library_body_dropdown{
+        padding-top: 26px;
+        padding-left: 26px;
+    }
+}
+
+/*右边列表*/
+/* 搜索框 */
+.search_input_library{
+    width: 100%;
+    min-width: 150px;
+    height: 35px;
+    /*margin-left: 5%;*/
+    border-radius:5px;
+    display:flex;
+    /* background-color: rgb(206, 38, 38); */
+    background-color: rgb(47, 47, 47);
+}
+.search_input_library img{
+    transform: scale(0.8,0.8);
+    height: 100%;
+}
+.search_input_library input[type="text"]{
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 600;
+    outline: 0;
+    color: rgb(247, 247, 247);
+    border-radius:18px;
+    border:0px;
+    background-color: rgb(47, 47, 47);
+}
+/*折叠分类*/
+.Collapse-fenlei-library{
+    width: 100%;
+    padding-top: 10px;
+}
+.card-fenlei-library{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    border: 0;
+    border-radius: 0;
+    /*border-top: 1px #474747 solid;*/
+    color: white;
+    padding-left: 0;
+    background-color: rgb(15,15,15);
+}
+/*单个折叠*/
+.collapseExample{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px #474747 solid;
+}
+.collapseExample button{
+    background-color: rgb(15,15,15);
+    border: 0;
+}
+.collapse div:hover{
+    color: #5e5e5e;
+}
+.collapseExample button{
+    color: #b8b8b8;
+}
+
+/*分页*/
+.Pagination-library{
+    display: flex;
+    width: 100%;
+    /*border: 1px red solid;*/
+    /*height: 20px;*/
+    padding-bottom: 50px;
+}
+.Pagination-library a{
+    font-size: 1.1em;
+    background-color: rgb(15,15,15);
+    color: #7f7f7f;
+    border: 0;
+}
+.Pagination-library a:hover{
+    color: white;
+    background-color: #5e5e5e;
+
+}
+
+

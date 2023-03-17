@@ -1,0 +1,177 @@
+.shopingcart-body {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    /*border: 1px red solid;*/
+}
+
+.shopingcart-body > h1 {
+    color: white;
+    font-weight: 400;
+    font-size: 2.6em;
+}
+
+.content-body {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+}
+
+/*左*/
+.cart-zuo-content-body {
+    width: 100%;
+    height: auto;
+    /*border: 1px red solid;*/
+}
+
+
+/*游戏内容*/
+.game-list {
+    display: flex;
+    padding: 20px;
+    background-color: #2d2d2d;
+    width: auto;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.game-list:hover {
+    background-color: #3d3d3d;
+}
+
+/*图片*/
+.game-list > img {
+    border-radius: 5px;
+    height: 100%;
+}
+
+/*文字内容*/
+.text-content {
+    padding-left: 10px;
+    width: 100%;
+    /*border: 1px red solid;*/
+}
+
+/*添加至愿望清单*/
+.button-body {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    /*border: 1px red solid;*/
+    margin-top: 80px;
+}
+
+.button-body a {
+    padding-left: 15px;
+    color: #b9b9b9;
+}
+
+.button-body a:hover {
+    color: #ffffff;
+}
+
+
+/*右*/
+.cart-you-content-body {
+    margin-top: 20px;
+    width: 400px;
+    height: auto;
+    padding-left: 25px;
+    /*border: 1px red solid;*/
+}
+
+.cart-you-content-body > h3 {
+    color: white;
+}
+
+/*游戏概览*/
+.gailan-body {
+    padding-top: 26px;
+    width: 100%;
+    height: auto;
+}
+
+/*税收*/
+.shishou {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    /*border: 1px red solid;*/
+}
+.shishou h5{
+    margin: 0;
+}
+
+.goumai-button{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(24, 132, 253);
+    color: white;
+    border: 1px rgb(15, 15, 15) solid;
+    border-radius: 5px;
+}
+.goumai-button:hover{
+    background-color: rgb(56, 149, 255);
+}
+.goumai-button:active{
+    border: 1px rgb(255, 255, 255) solid;
+}
+
+/*700出现*/
+.max-700-cart-you-content-body {
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    /*border: 1px red solid;*/
+}
+
+.max-700-cart-you-content-body > h3 {
+    color: #d3d3d3;
+    font-size: 1.6em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*响应式*/
+/**/
+/**/
+@media screen and (max-width: 900px){
+    .game-list{
+        height: 150px;
+    }
+    .button-body{
+        margin-top: 35px;
+    }
+    .button-body a{
+        font-size: 0.8em;
+    }
+    .text-content h4{
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 700px){
+    .cart-you-content-body{
+        display: none;
+    }
+    .max-700-cart-you-content-body{
+        display: block;
+    }
+
+}

@@ -1,0 +1,321 @@
+/**/
+/*顶部 body*/
+/**/
+.top-fixed-information {
+    /*min-width: 900px;*/
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    vertical-align: center;
+    background-color: #000000;
+}
+
+/*返回页面 body*/
+.fanhui-body {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.fanhui-body a {
+    color: #b9b9b9;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.fanhui-body a:hover {
+    color: white;
+}
+
+/*标题*/
+.title-body {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.title-body > h4 {
+    color: white;
+}
+
+/*商标*/
+.brand-body {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.brand-body > img {
+    height: 100%;
+}
+
+
+/*最外body*/
+.body {
+    overflow: hidden;
+    /*position: absolute;*/
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    position: absolute;
+}
+
+.body video {
+    display: block;
+    min-width: 1100px;
+    min-height: 600px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    z-index: 1;
+    /*opacity: 0.6;*/
+}
+
+/*内容*/
+/**/
+.content-body {
+    /*min-width: 633px;*/
+    display: flex;
+    top: 0;
+    bottom: 10px;
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+    background-color: rgba(0, 0, 0, 0.87);
+    position: absolute;
+    z-index: 55;
+}
+
+/*左*/
+.inf-zuo-content-body {
+    padding: 20px;
+    width: 70%;
+    height: 100%;
+    /*border: 1px white solid;*/
+
+}
+
+/*右*/
+.inf-you-content-body {
+    padding: 20px;
+    width: 30%;
+    height: 100%;
+    /*border: 1px #b42323 solid;*/
+    /*background-color: rgba(0, 0, 0, 0.87);*/
+}
+
+/*头像*/
+.touxiang-body {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-bottom: 25px;
+    /*border: 1px solid grey;*/
+}
+
+.touxiang-img-body {
+    padding: 0;
+    margin: 0;
+    width: 30%;
+    height: auto;
+    border: 15px solid #0483c7;
+    border-radius: 10px;
+}
+
+.touxiang-img-body > img {
+    width: 100%;
+}
+
+/*最新动态*/
+.zuixindongtai-body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
+.zuixindongtai-body > h5 {
+    color: #cbcbcb;
+    margin: 0;
+}
+
+/*动态内容*/
+.dongtai-content-body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*图片  名字 时长*/
+.content-img-name-body {
+    display: flex;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*图片*/
+.dongtai-content-img {
+
+}
+
+.dongtai-content-img > img {
+    width: 200px;
+}
+
+/*名字*/
+.name-shijian {
+    padding-left: 10px;
+}
+
+.name-shijian > h5 {
+    color: white;
+    font-size: 1em;
+}
+
+.name-shijian > h6 {
+    color: #989898;
+    font-size: 0.6em;
+}
+
+/*成就*/
+.content-chengjiu-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 1px #424242 solid;
+}
+
+/*成就图片*/
+.chengjiu-img-body {
+    width: auto;
+}
+
+.chengjiu-img-body img {
+    width: 30px;
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.chengjiu-img-body img:hover {
+    transition: all 0.3s;
+    transform: scale(1.4, 1.4);
+}
+
+/**/
+/*右*/
+/**/
+/*称号*/
+.chenghao-body {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.chenghao-body img {
+    width: 50px;
+    margin: 0;
+}
+
+.chenghao-body > h6 {
+    color: #989898;
+    font-size: 0.6em;
+    margin: 0;
+    padding: 0;
+}
+
+/*编辑资料*/
+.bianji-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #c7c7c7;
+    margin-top: 10px;
+}
+.bianji-button:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+/*当前在线*/
+.zaixian-body{
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+/*徽章 body*/
+.huizhang-body{
+    width: 100%;
+    height: auto;
+}
+.huizhang-img img{
+    transition: all 0.3s;
+}
+.huizhang-img img:hover{
+    transition: all 0.3s;
+    transform: scale(1.4, 1.4);
+}
+/*标题*/
+.huizhang-title{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.huizhang-title>h5{
+    /*color: white;*/
+    color: #ffffff;
+    font-size: 0.9em;
+}
+.huizhang-title>h4{
+    color: grey;
+    padding-left: 7px;
+}
+
+
+
+.end-body {
+    z-index: 9999;
+    /*position: absolute;*/
+    color: white;
+    width: 100%;
+    height: 100px;
+    background-color: #020202;
+}
+
+
+/*响应*/
+@media screen and (max-width: 900px){
+    .inf-you-content-body{
+        display: none;
+    }
+    .inf-zuo-content-body{
+        width: 100%;
+    }
+    .content-body{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+}

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见问题</title>
+
+
+    <link rel="stylesheet" href="css/bootstrap/4/bootstrap.css">
+    <link rel="stylesheet" href="css/public/navigation.css">
+    <link rel="stylesheet" href="css/public/join.css">
+    <link rel="stylesheet" href="css/public/bottomInformation.css">
+    <link rel="stylesheet" href="css/Top/problem/problem.css">
+    <!--蓝色为  rgb(24, 132, 253);      #1884FD      -->
+    <!-- 总体颜色为    background-color: rgb(15, 15, 15); -->
+    <!--黑色底     background-color: #2d2d2d;-->
+    <script src="js/bootstrap/4/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap/4/bootstrap.bundle.min.js"></script>
+    <script src="js/myJs.js"></script>
+
+
+</head>
+<body>
+
+<!--public-->
+<!--cover覆盖登录框-->
+<div id="join-cover-body">
+    <h1 style="cursor: pointer;" onclick="document.getElementById('join_background').style.display='block'">登录</h1>
+    <h2><a href="MyInformation.html">账户信息</a></h2>
+    <h2><a href="HopeList.html">愿望单</a></h2>
+    <h2><a href="ShopingCart.html">购物车</a></h2>
+    <div style="border-top: 1px #666666 solid;"><a style="color: #c4c4c4;font-size:1em;" href="">退出</a></div>
+</div>
+<!--账号登录 弹出框-->
+<div id="join_background">
+    <div class="join_">
+        <!-- 页面内容 -->
+        <div class="join_content">
+            <!-- 商标 -->
+            <div class="join_shangbiao">
+                <img src="images/navigation/navigation_top/icon_shangbiao2.png" alt="">
+            </div>
+            <!-- 上方选项卡 -->
+            <div class="join_style_con">
+                <!-- <a href=""> -->
+                <div class="active  join_style_list">
+                    Games账号登录
+                </div>
+                <!-- </a> -->
+
+                <!-- <a href=""> -->
+                <div class="join_style_list">
+                    注册Games账号
+                </div>
+                <!-- </a> -->
+
+            </div>
+            <!-- 登录与注册内容 -->
+            <div class="card-body">
+                <!-- 登录页面 -->
+                <div class="card_denglu ">
+                    <div class="join_input">
+
+                        <form id="join_form">
+                            <input id=join_email" type="text" name="join_email" placeholder="    电子邮件地址"/>
+                            <input id="join_password" type="password" name="join_password" placeholder="    密码"/>
+                        </form>
+                    </div>
+
+
+                    <div class="join_button">
+                        <button onclick="check_join()">现在登录</button>
+                        <button
+                                onclick="document.getElementById('join_background').style.display='none'">取消登录
+                        </button>
+
+                    </div>
+                    <div class="join_buttom-text1" style="margin-top: 90px;">
+                        <a style="color: rgb(255, 255, 255);text-decoration: underline;"
+                           href="https://www.epicgames.com/site/zh-CN/privacypolicy?lang=zh-Hans"
+                           target="_blank">隐私政策</a>
+
+                    </div>
+                    <div class="join_buttom-text2">
+                        <h3 style="color: rgb(255, 255, 255);font-size: 1em;">想要了解我们？<a style="color: rgb(255, 255, 255);font-size: 1em;
+                            text-decoration: underline;"
+                                                                                        href="https://www.epicgames.com/site/zh-CN/epic-games-store-faq?lang=zh-CN"
+                                                                                        target="_blank">关于我们</a>
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- 注册页面 -->
+                <div class="card_zhuce" style="display:none;">
+                    <div class="select_area_div">
+                        <h3>国家地区</h3>
+                        <select id="group" value="1">
+                            <option value="1">中国大陆</option>
+                            <option value="2">中国台湾</option>
+                            <option value="3">中国香港/澳门</option>
+                            <option value="4">美国</option>
+                            <option value="5">日本</option>
+                            <option value="6">韩国</option>
+                            <option value="7">英国</option>
+                            <option value="2">德国</option>
+                        </select>
+                    </div>
+
+                    <div class="join_input">
+
+                        <form id="register_form">
+                            <input id="register_email" type="email" name="register_email" placeholder="    电子邮件地址"/>
+                            <input id="register_password" type="password" name="register_password"
+                                   placeholder="    密码"/>
+                            <div class="pass_wrap">
+                                <em>密码强度：</em>
+                                <em id="strength">高</em>
+                                <div id="strengthLevel" class="strengthLv0"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="join_button ">
+                        <button onclick="check_register()">现在注册</button>
+                        <button
+                                onclick="document.getElementById('join_background').style.display='none'">取消注册
+                        </button>
+
+                    </div>
+                    <div class="danxuan_join1">
+                        <input type="radio" style="margin-right: 10px;">我想收到来自Games的消息、问卷调查和特惠。
+
+                    </div>
+                    <div class="danxuan_join1">
+                        <input type="radio" style="margin-right: 10px;">我已阅读并同意<a
+                            style="text-decoration:underline;color: rgb(255, 255, 255);"
+                            href="https://www.epicgames.com/site/zh-CN/privacypolicy?lang=zh-Hans"
+                            target="_blank">隐私政策</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--顶部导航-->
+<div class="title_navigation">
+
+    <!--商标-->
+    <img src="images/navigation/navigation_top/icon_shangbiao2.png" alt="">
+    <!--中间-->
+    <div class="navigation_content_1">
+        <a id="top" href="index_Store.html">
+            <div>
+                商城
+            </div>
+        </a>
+        <a href="Problem.html">
+            <div style="color: #fff;;vertical-align:center;border-bottom: 5px rgb(0, 107, 230) solid;">常见问题</div>
+        </a>
+        <a href="Help.html">
+            <div>帮助</div>
+        </a>
+    </div>
+
+    <!--账户-->
+    <!--    <a href="#" title="登录账号" >-->
+    <div class="my-count-body" onclick="showDiv()" onclick="hideDiv()">
+        <img src="images/navigation/navigation_top/myself.png" alt="" style="width: 30px">
+        <h3 style="margin-left: 10px;color: white;">MICHEAL</h3>
+    </div>
+</div>
+
+
+<!--内容-->
+<!---->
+<!---->
+<div class="problem-body">
+    <!--标题-->
+    <div style="width: 100%;display: flex;justify-content: center;padding: 35px;">
+        <h3 style="color: #000000;font-size: 1.8em;margin-right: 27px;font-weight: 600;">常见问题</h3>
+    </div>
+    <div class="text-content">
+        <em>最近更新：2021年12月18日</em>
+        <div class="text-list">
+            <h6 style="font-weight: 600">Epic 游戏商城支持哪些平台？</h6>
+            <h6 style="font-weight: 400;">Epic 游戏商城目前支持 PC 和 Mac 端。您可以在任何产品页面的 "配置" 部分查看游戏的平台兼容信息。</h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">Epic 游戏商城未来有何计划？</h6>
+            <h6 style="font-weight: 400;">您可以查看 Trello 上的Epic游戏商城计划路线图，了解新特性、开发者更新和存在的主要问题。我们也将在动态消息和
+                Facebook、Twitter、Instagram 以及YouTube 等社交媒体上与大家分享重要更新。</h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">Epic游戏商城为什么能够有独家经营权？</h6>
+            <h6 style="font-weight: 400;">
+                <p>独家经营权是许多成功的游戏平台和其他数字娱乐形式（例如流媒体和音乐）平台发展的一部分。
+                <p>
+                <p>Epic 与开发者和发行商合作，在商城提供独家经营的游戏。
+                <p>作为交换，Epic 为其提供开发和营销所需的资金支持，帮助开发更多精良的游戏，同时为创作者们大大降低不确定性。
+            </h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">什么是创作者支持计划（Support-A-Creator）？</h6>
+            <h6 style="font-weight: 400;">创作者支持计划中，内容创作者能够使用创作者链接和创作者标签，从 Epic 游戏商城的游戏中获得收益。</h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">关于免费游戏有哪些最新动态？</h6>
+            <h6 style="font-weight: 400;">Epic 将在整个 2022 年期间每周提供一款新的免费游戏。领取的免费游戏归您所有。即便以后不再对新用户免费，您也仍可免费游玩。</h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">我领取了免费游戏，但账户中没有显示，为什么？</h6>
+            <h6 style="font-weight: 400;">一旦您领取了新游戏，它就为您所有了。如果您一段时间后回来，发现账号中还是缺失这款游戏，请检查您是否有多个账号。如果您是用 @gmail.com
+                电子邮件地址创建的 Epic 账号，请直接用 Gmail 的密码登录。用 Google 登录按钮会创建一个新的账号，即使它与同一个 @gmail.com
+                电子邮件地址关联。此外，请检查您是否同时拥有主机关联账号（通过PlayStation、Xbox 或者 Nintendo 登录）和独立的 Epic 账号。如果您仍然遇到问题，请联系玩家支持中心。</h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">我能在购买前试玩吗？</h6>
+            <h6 style="font-weight: 400;">一些发行商会不定期提供付费游戏的试玩版本或试玩期（例如
+                "免费周末试玩"）。在试玩期间，您可以在决定是否购买前，下载、体验游戏的试玩版本，但试玩期结束后，您将无法再进入游戏。</h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">如何在 Epic 游戏商城退款？</h6>
+            <h6 style="font-weight: 400;">所有游戏都可以在购买后 14 天内无条件退款，但游戏时长不能超过 2
+                小时。如果您被游戏封号，或者您的游戏行为违反了游戏服务条款，则该游戏无法进行退款。</h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">我如何联系支持中心？</h6>
+            <h6 style="font-weight: 400;">点击此处，即可联系我们的支持团队。此外，我们还建议您浏览我们的支持中心文章，这些文章或许可以回答或解决您的问题。</h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">我的 Epic Games 账户是否安全？</h6>
+            <h6 style="font-weight: 400;">Epic账户系统驱动《堡垒之夜》、《Rocket
+                League》、Epic游戏商城和虚幻引擎。该账号系统从未被攻破过。然而，由于其他网站被攻破后，泄漏了部分电子邮件地址和密码，导致黑客使用这些账号和密码破解个别用户的 Epic 账号。
+                <p>
+                <p> 如果您在 Epic 上使用的电子邮件和密码，与您在被攻破的网站上所使用的电子邮件和密码相同，那么您的账户就容易受到攻击。如果要确保 Epic
+                    账号安全，请使用不同的密码，并启用多重验证。点击此处，更多地了解我们为保护您帐户所采取的措施，以及您该如何做才能确保账户安全。
+            </h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">Epic游戏商城支持哪些语言？</h6>
+            <h6 style="font-weight: 400;">
+                Epic游戏商城目前支持英语、阿拉伯语、德语、西班牙语（西班牙）、西班牙语（拉丁美洲）、法语、意大利语、日语、韩语、波兰语、葡萄牙语、俄语、泰语、土耳其语、简体中文和繁体中文。游戏内的语言支持由开发者提供，因游戏而异。您可以查看每款游戏的商城购买页面，了解语言支持信息。</h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">Epic游戏商城支持分区定价吗？</h6>
+            <h6 style="font-weight: 400;">支持，我们在 190 多个国家和 30 多个地区提供分区定价。我们还会定期审查区域标准，为开发者提供一组建议区域折扣。</h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">支持哪些付款方式？</h6>
+            <h6 style="font-weight: 400;">Epic游戏商城支持信用卡、PayPal 及多种其他支付方式。以下是我们目前所支持的其他支付方式。附加额外付款手续费的支付方式带 * 星号标记。</h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">Epic 游戏商城在哪些国家/地区可用？</h6>
+            <h6 style="font-weight: 400;">
+                Epic游戏商城为世界上多数国家/地区的玩家开放，被美国法律禁止的国家，例如朝鲜和伊朗除外。当您发行游戏时，可能要为特定的地区之额外法规进行对应配置，方可在这些地区发售。</h6>
+        </div>
+        <div class="text-list">
+            <h6 style="font-weight: 600">你们接受哪些货币？以哪些货币显示价格？</h6>
+            <h6 style="font-weight: 400;">Epic 游戏商城目前接受 43
+                种货币（美元、欧元、英镑、波兰兹罗提、巴西雷亚尔、乌克兰格里夫纳、俄罗斯卢布、韩元、日元、土耳其里拉、澳元、加元、丹麦克朗、挪威克朗、瑞典克朗、捷克克朗、以色列新谢克尔、瑞士法郎、墨西哥比索、秘鲁索尔、匈牙利福林、智利比索、沙特里亚尔、阿联酋迪拉姆、罗马尼亚列伊、新西兰元、南非兰特、印度卢比、哥伦比亚比索、哥斯达黎加科朗、乌拉圭比索、港元、印度尼西亚盾、马来西亚林吉特、菲律宾比索、新加坡元、泰铢、越南盾、哈萨克斯坦坚戈、卡塔尔里亚尔、保加利亚列弗、新台币、人民币）。我们正在努力为在线商城引入更多币种。
+            </h6>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!--底部信息-->
+<div class="bottom-information-body">
+    <!--title-->
+    <div style="width: 100%;display: flex;justify-content: space-between;">
+        <div class="title-img">
+            <img style="padding-right: 10px;" src="images/bottom-information/QQ_tencent-qq.svg" alt="">
+            <img style="padding-right: 10px;" src="images/bottom-information/wechat.svg" alt="">
+            <img style="padding-right: 10px;" src="images/bottom-information/weibo.svg" alt="">
+        </div>
+        <div class="to-top">
+            <a href="#top"><img style="width: 40px;" src="images/bottom-information/to-top.svg" alt="回到顶部" title="回到顶部"></a>
+        </div>
+
+    </div>
+
+    <!--信息-->
+    <div class="lianxi-body">
+        <!--开发联系方式-->
+        <div>
+            <h4 style="color: #8d8d8d;font-size: 0.9em;">开发者信息</h4>
+            <div style="display: flex;">
+                <div class="lieming">
+                    <h4>name：</h4>
+
+                </div>
+                <div class="lianxi-information">
+                    <h4>Zheng Haoyang</h4>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!--资源-->
+        <div style="padding-top: 30px;border-bottom: 1px #505050 solid;padding-bottom: 30px">
+            <h4 style="color: #8d8d8d;font-size: 0.9em;">资源</h4>
+            <div style="display: flex;">
+                <div class="ziyuan-body">
+                    <a href="https://www.epicgames.com/affiliate/en-US/overview">创作者支持计划</a>
+                    <a href="https://store.epicgames.com/zh-CN/publish">在BG Game上分发布</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/careers">职业</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/about">公司</a>
+                    <a href="https://store.epicgames.com/zh-CN/eula">授权协议</a>
+                </div>
+                <div class="ziyuan-body" style="padding-left: 30px">
+                    <a href="https://dev.epicgames.com/zh-CN/home">在线服务</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/community-rules">社区守则</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/ux">用户体验调查</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/fan-art-policy">爱好者作品政策</a>
+                </div>
+            </div>
+        </div>
+
+        <!--服务条款 隐私政策 商店政策-->
+        <div style="display: flex;justify-content: space-between;align-items: center">
+            <div class="bottom-information-end-body">
+                <a href="https://www.epicgames.com/site/zh-CN/tos">隐私条款</a>
+                <a style="padding-left: 15px;" href="https://www.epicgames.com/site/zh-CN/privacypolicy">隐私政策</a>
+                <a style="padding-left: 15px;"
+                   href="https://www.epicgames.com/site/zh-CN/store-refund-policy">商店退款政策</a>
+            </div>
+            <div class="bottom-information-img">
+                <img src="images/navigation/navigation_top/icon_shangbiao2.png" alt="">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

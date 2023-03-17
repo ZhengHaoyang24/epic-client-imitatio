@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>社区</title>
+
+    <link rel="stylesheet" href="css/bootstrap/4/bootstrap.css">
+    <link rel="stylesheet" href="css/public/navigation.css">
+    <link rel="stylesheet" href="css/public/join.css">
+    <link rel="stylesheet" href="css/Store/advertising-window.css">
+    <link rel="stylesheet" href="css/public/bottomInformation.css">
+    <link rel="stylesheet" href="css/Community/Community.css">
+    <!--蓝色为  rgb(24, 132, 253);   #1884FD-->
+    <!-- 总体颜色为    background-color: rgb(15, 15, 15); -->
+    <!-- 暗色背景     background-color: #2d2d2d; -->
+    <script src="js/bootstrap/4/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap/4/bootstrap.bundle.min.js"></script>
+    <script src="js/myJs.js"></script>
+
+</head>
+<body>
+
+
+<!--广告弹窗-->
+<div id="advertise-body">
+
+    <div class="advertise-img-button">
+
+        <div class="advertise-content-body">
+            <img src="images/GameStore/advertise/egs-summer-showcase-carousel-desktop-1920x1080-195535bde07c.jpg" alt="">
+            <div class="cover-advertise-content-body">
+                <div class="advertise-text-body">
+
+                    <!--时间 文字-->
+                    <div class="zhibo_time">
+                        <h1>直播倒计时：<span id="zhibo_time"></span></h1>
+                    </div>
+
+                    <div class="time-text">
+
+                        <h5 style="color: white;">于北京时间<span  id="tomorrow_date"></span>0点整，在Twitch收看2022年的Game Fest的一部分的游戏商城年度游戏展，期待你的参与！</h5>
+                    </div>
+                    <!--按钮-->
+                    <div class="zhidao_body">
+                        <button onclick="document.getElementById('advertise-body').style.display='none'">我知道了</button>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+</div>
+
+
+<!--public-->
+<!--cover覆盖登录框-->
+<div id="join-cover-body">
+    <h1 style="cursor: pointer;" onclick="document.getElementById('join_background').style.display='block'">登录</h1>
+    <h2><a href="MyInformation.html">账户信息</a></h2>
+    <h2><a href="HopeList.html">愿望单</a></h2>
+    <h2><a href="ShopingCart.html">购物车</a></h2>
+    <div style="border-top: 1px #666666 solid;"><a style="color: #c4c4c4;font-size:1em;" href="">退出</a></div>
+</div>
+<!--账号登录 弹出框-->
+<div id="join_background">
+    <div class="join_">
+        <!-- 页面内容 -->
+        <div class="join_content">
+            <!-- 商标 -->
+            <div class="join_shangbiao">
+                <img src="images/navigation/navigation_top/icon_shangbiao2.png" alt="">
+            </div>
+            <!-- 上方选项卡 -->
+            <div class="join_style_con">
+                <!-- <a href=""> -->
+                <div class="active  join_style_list">
+                    Games账号登录
+                </div>
+                <!-- </a> -->
+
+                <!-- <a href=""> -->
+                <div class="join_style_list">
+                    注册Games账号
+                </div>
+                <!-- </a> -->
+
+            </div>
+            <!-- 登录与注册内容 -->
+            <div class="card-body">
+                <!-- 登录页面 -->
+                <div class="card_denglu ">
+                    <div class="join_input">
+
+                        <form id="join_form">
+                            <input id=join_email" type="text" name="join_email" placeholder="    电子邮件地址"/>
+                            <input id="join_password" type="password" name="join_password" placeholder="    密码"/>
+                        </form>
+                    </div>
+
+
+                    <div class="join_button">
+                        <button onclick="check_join()">现在登录</button>
+                        <button
+                                onclick="document.getElementById('join_background').style.display='none'">取消登录
+                        </button>
+
+                    </div>
+                    <div class="join_buttom-text1" style="margin-top: 90px;">
+                        <a style="color: rgb(255, 255, 255);text-decoration: underline;"
+                           href="https://www.epicgames.com/site/zh-CN/privacypolicy?lang=zh-Hans"
+                           target="_blank">隐私政策</a>
+
+                    </div>
+                    <div class="join_buttom-text2">
+                        <h3 style="color: rgb(255, 255, 255);font-size: 1em;">想要了解我们？<a style="color: rgb(255, 255, 255);font-size: 1em;
+                            text-decoration: underline;"
+                                                                                        href="https://www.epicgames.com/site/zh-CN/epic-games-store-faq?lang=zh-CN"
+                                                                                        target="_blank">关于我们</a>
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- 注册页面 -->
+                <div class="card_zhuce" style="display:none;">
+                    <div class="select_area_div">
+                        <h3>国家地区</h3>
+                        <select id="group" value="1">
+                            <option value="1">中国大陆</option>
+                            <option value="2">中国台湾</option>
+                            <option value="3">中国香港/澳门</option>
+                            <option value="4">美国</option>
+                            <option value="5">日本</option>
+                            <option value="6">韩国</option>
+                            <option value="7">英国</option>
+                            <option value="2">德国</option>
+                        </select>
+                    </div>
+
+                    <div class="join_input">
+
+                        <form id="register_form">
+                            <input id="register_email" type="email" name="register_email" placeholder="    电子邮件地址"/>
+                            <input id="register_password" type="password" name="register_password"
+                                   placeholder="    密码"/>
+                            <div class="pass_wrap">
+                                <em>密码强度：</em>
+                                <em id="strength">高</em>
+                                <div id="strengthLevel" class="strengthLv0"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="join_button ">
+                        <button onclick="check_register()">现在注册</button>
+                        <button
+                                onclick="document.getElementById('join_background').style.display='none'">取消注册
+                        </button>
+
+                    </div>
+                    <div class="danxuan_join1">
+                        <input type="radio" style="margin-right: 10px;">我想收到来自Games的消息、问卷调查和特惠。
+
+                    </div>
+                    <div class="danxuan_join1">
+                        <input type="radio" style="margin-right: 10px;">我已阅读并同意<a
+                            style="text-decoration:underline;color: rgb(255, 255, 255);"
+                            href="https://www.epicgames.com/site/zh-CN/privacypolicy?lang=zh-Hans"
+                            target="_blank">隐私政策</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--顶部导航-->
+<div class="title_navigation">
+
+    <!--商标-->
+    <img src="images/navigation/navigation_top/icon_shangbiao2.png" alt="">
+    <!--中间-->
+    <div class="navigation_content_1">
+        <a id="top" href="">
+            <div style="color: #fff;;vertical-align:center;border-bottom: 5px rgb(0, 107, 230) solid;">
+                商城
+            </div>
+        </a>
+        <a href="Problem.html">
+            <div>常见问题</div>
+        </a>
+        <a href="Help.html">
+            <div>帮助</div>
+        </a>
+    </div>
+
+    <!--账户-->
+    <!--    <a href="#" title="登录账号" >-->
+    <div class="my-count-body" onclick="showDiv()" onclick="hideDiv()">
+        <img src="images/navigation/navigation_top/myself.png" alt="" style="width: 30px">
+        <h3 style="margin-left: 10px;color: white;">MICHEAL</h3>
+    </div>
+</div>
+<!--固定导航栏-->
+<div class="navigation_daohang_div">
+    <!--搜索框-->
+    <div class="search_input">
+        <img src="images/navigation/navigation_fixed/sousuo.png">
+        <input type='text' placeholder="搜索">
+    </div>
+
+    <div style="width: 80%;display: flex;justify-content: space-between;align-items: center;">
+
+        <div class="daohang_1">
+            <a href="index_Store.html">商城</a>
+            <a href="GameLibrary.html">游戏库</a>
+            <a href="Community.html" style="color: white;font-weight: 700">社区</a>
+            <a style="color: rgb(24, 132, 253);cursor: pointer;" onclick="document.getElementById('advertise-body').style.display='block'">直播</a>
+        </div>
+
+        <div class="daohang_2">
+            <a href="HopeList.html">愿望清单</a>
+            <a href="ShopingCart.html">购物车</a>
+        </div>
+
+        <!--下拉菜单-->
+        <div class="daohang_3">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle navigation_dropdown" type="button"
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                    社区
+                </button>
+                <div class="dropdown-menu my_detail_dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="index_Store.html">商城</a>
+                    <a class="dropdown-item" href="GameLibrary.html">游戏库</a>
+                    <a class="dropdown-item" href="Community.html">社区</a>
+                    <a class="dropdown-item"  style="color: rgb(24, 132, 253);cursor: pointer;" onclick="document.getElementById('advertise-body').style.display='block'">直播</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="daohang_4">
+            <a href="HopeList.html"><img src="images/navigation/navigation_fixed/心愿单.svg" alt=""></a>
+            <a href="ShopingCart.html"><img src="images/navigation/navigation_fixed/购物车.svg" alt=""></a>
+        </div>
+
+
+    </div>
+
+</div>
+<!--public-->
+
+<!--内容-->
+<div class="community_content_div">
+    <!--标题-->
+    <div class="community-title-div">
+        <h2>社区活动</h2>
+        <h3>所有游戏与软件的社区和官方内容。</h3>
+    </div>
+
+    <!--查询 新闻-->
+    <div class="community-search-news-body">
+        <h3 style="color: white;font-size: 1em">新闻</h3>
+        <!--小于700出现-->
+        <div class="news-body-1-max700">
+            <div style="width:47%;">
+                <img src="images/Community/news/activity.jpg" alt="">
+                <h3 style="color: white;font-size: 1em;padding-top: 10px;">2022超级特惠</h3>
+                <a style="color: #ffffff;"
+                   href="https://store.epicgames.com/zh-CN/news/the-epic-mega-deals-2022">阅读更多</a>
+            </div>
+            <div style="width:47%;">
+                <img src="images/Community/news/activity_2.jpg" alt="">
+                <h3 style="color: white;font-size: 1em;padding-top: 10px;">2022大特卖</h3>
+                <a style="color: #ffffff;"
+                   href="https://store.epicgames.com/zh-CN/news/the-epic-mega-sale-for-may-2022">阅读更多</a>
+            </div>
+        </div>
+        <div class="news-body">
+            <div class="news-body-1">
+                <div style="width:47%;">
+                    <img src="images/Community/news/activity.jpg" alt="">
+                    <h3 style="color: white;font-size: 1em;padding-top: 10px;">2022超级特惠</h3>
+                    <a style="color: #ffffff;" href="https://store.epicgames.com/zh-CN/news/the-epic-mega-deals-2022">阅读更多</a>
+                </div>
+                <div style="width:47%;">
+                    <img src="images/Community/news/activity_2.jpg" alt="">
+                    <h3 style="color: white;font-size: 1em;padding-top: 10px;">2022大特卖</h3>
+                    <a style="color: #ffffff;"
+                       href="https://store.epicgames.com/zh-CN/news/the-epic-mega-sale-for-may-2022">阅读更多</a>
+                </div>
+            </div>
+
+            <div class="news-body-2">
+                <div style="width: 100%;height: 50%;display: flex;justify-content: space-around;flex-direction: column;">
+                    <div>
+                        <h2 style="color: white;font-size: 1.1em">查找中心</h2>
+                        <div class="news-search-input">
+                            <img src="images/navigation/navigation_fixed/sousuo.png">
+                            <input type='text' placeholder="查找产品">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 100%;height: 50%;border-top: 1px #575757 solid;display: flex;justify-content: space-around;flex-direction: column;">
+                    <div>
+                        <h2 style="color: white;font-size: 1.1em">寻找玩家</h2>
+                        <div class="news-search-input">
+                            <img src="images/navigation/navigation_fixed/sousuo.png">
+                            <input type='text' placeholder="查找好友">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--内容1-->
+    <div class="community-content-1-body">
+        <!--左-->
+        <div class="content-1-body">
+            <div class="content-1-zuo-img">
+                <img src="images/Community/con-1/img-3.jpg" alt="">
+            </div>
+            <div class="content-1-you-text">
+                <!--欢乐与价值-->
+                <div class="huanle-jiazhi-body">
+                    <h6>有281人觉得这篇测评有价值</h6>
+                    <h6>有109人觉得这篇测评很欢乐</h6>
+                </div>
+                <!--赞-->
+                <div class="zan-tuijina-body">
+                    <!--赞图片-->
+                    <div class="zan-img">
+                        <img src="images/Community/icon/zan.svg" alt="">
+                    </div>
+                    <!--推荐与时长-->
+                    <div class="zan-text">
+                        <h6>推荐</h6>
+                        <h6>时长：0.4小时</h6>
+                    </div>
+                </div>
+                <!--评论-->
+                <div style="border-top: 1px #535353 solid;">
+                    <h6 style="padding-top: 10px;color: #bb6f02;font-size: 0.6em;">发布于5月29号</h6>
+                    <h4 style="color: white;font-size: 0.8em;">游戏太短了你甚至来得及退款</h4>
+                </div>
+
+            </div>
+
+        </div>
+        <!--右-->
+        <div class="content-1-body">
+            <div class="content-1-zuo-img">
+                <img src="images/Community/con-1/img-2.jpg" alt="">
+            </div>
+            <div class="content-1-you-text">
+                <!--欢乐与价值-->
+                <div class="huanle-jiazhi-body">
+                    <h6>有654人觉得这篇测评有价值</h6>
+                    <h6>有712人觉得这篇测评很欢乐</h6>
+                </div>
+                <!--赞-->
+                <div class="zan-tuijina-body">
+                    <!--赞图片-->
+                    <div class="zan-img">
+                        <img src="images/Community/icon/zan.svg" alt="">
+                    </div>
+                    <!--推荐与时长-->
+                    <div class="zan-text">
+                        <h6>推荐</h6>
+                        <h6>时长：300.5小时</h6>
+                    </div>
+                </div>
+                <!--评论-->
+                <div class="content-1-text-content">
+                    <h6>发布于5月29号</h6>
+                    <h4>
+                        我们需要中文
+                        我們需要中文
+                        we need chinese
+
+
+                    </h4>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!--内容2-->
+    <div class="community-content-2-body">
+        <div class="con2-title">
+            <h1>沙石镇时光</h1>
+            <div style="display: flex;">
+                <h2 style="color: #bb6f02;font-size: 0.8em;">发布于6月23号</h2>
+                <h2 style="color: #a0a0a0;font-size: 0.8em;padding-left: 5px;">来自</h2>
+                <a href="" style="text-decoration:underline;text-decoration-color: white; "><h2
+                        style="color: #ffffff;font-size: 0.8em;padding-left: 2px;">薛定谔的猫</h2></a>
+            </div>
+
+        </div>
+        <div class="content-2-img">
+            <img src="images/Community/con-2/con-2-img.jpg" alt="">
+        </div>
+        <!--推荐-->
+        <div class="tuijian-name">
+            <div class="con-2-zan-tuijina-body">
+                <!--赞图片-->
+                <div class="con2-zan-img">
+                    <img src="images/Community/icon/nozan.svg" alt="">
+                </div>
+                <!--推荐与时长-->
+                <div class="zan-text">
+                    <h6>暂不推荐</h6>
+                    <h6>时长：198.3小时</h6>
+                </div>
+            </div>
+            <div style="padding-left: 15px;">
+                <h6 style="color: #acacac;font-size: 0.6em;margin: 0">有1654人觉得这篇测评有价值</h6>
+                <h6 style="color: #acacac;font-size: 0.6em;margin: 0">有908人觉得这篇测评很欢乐</h6>
+            </div>
+        </div>
+        <!--评论-->
+        <div class="shashizhen-pinglun">
+            暂不推荐。波西亚250多个小时，沙石镇也玩了五十几个小时。优化和加载方面的问题不再赘述。另一个很重要的劝退点也是很多人提到的人设问题。好多人吐槽整个镇上就没几个好人。
+            其实倒也不是，只是感觉有的边缘人物比制作组用力塑造的人物要更讨喜些。比如小胖子伯吉斯，虽然一开始的时候跳出来警告你不能伐树取水，但是经常可以看到他在照顾野外的树木，沙石镇有事的时候也会捐款捐物。偶尔还会到我的工坊边上默默看我工作。（也有可能是像我偷颜的肉干一样，看上了我的肉干？）当我和他成为朋友后，还会告诉我，他的朋友很少，希望能永远和我做朋友。
+            又比如民兵团的梅丁，少有的建模比画像好看十倍的人物。平时没什么存在感，但是兢兢业业勤勤恳恳，捐款的时候把所有工资都捐了。当我问他生日的时候，他是我遇到唯一一个没有说自己想要什么，而是说作为朋友他当然知道我的生日，要知道这时候社交页面我和他才刚泛泛之交的关系，相比于其他我刷得那么努力还对我没好脸的npc，简直一股清流。所以副团长给了猫，就算小黑很可爱，我也觉得不能忍。
+            我觉得整体上来说，沙石镇比波西亚少了一种氛围感。感觉上这是一个封闭的小镇，而玩家是格格不入的外来者。 最主要的原因是大部分的文案都没有表现对玩家的尊重。
+            本作的钦定女主米安，虽然人设上是个努力勤奋热心的完美正面人物，但我一直对她喜欢不起来。倒不是她不好，而是整个游戏的氛围让我觉得她就像每个人童年都会有的别人家的小孩，比我早一步到了小镇，大家先认识了米安，埃尔西拉着米安玩，我就是个凑数的。欧文的厨房坏了找米安修，却找我来撒谎善后。大家都在夸米安干得好，每个剧情对话里都是“米安和新工坊主”，不是“米安和我”也不是“两位新工坊主”，米安做了什么，大家会夸她，而当我为沙石镇做了什么的时候，大家夸的是“工坊主们”。我觉得就算技术上做不到语音嵌入每个玩家的名字，至少在文案上应该体现出对玩家更多一点的尊重吧。比如把工坊主名字放前面，改成”我和米安“，而当我们同时在场的时候，把npc对我们说的话从”米安和工坊主“改成”你们“，这些细节的改动，会让人从心理上觉得”我“才是主角。而不是现在这样，我觉得我只是米安附带的一个不知名工具人工坊主。
+            （一个小小的建议，如果还有下一作的话，竞争对手可以是希金斯和米安的结合，即认真努力但又不是那种人见人爱的性格，一边会帮你适应新环境，一边却又嘴上不饶人地说着”我才不会输给你“的话，有能力但不善交际，最后在玩家的帮助下逐渐和镇上居民打成一片）
+            除了米安外，现在开放的几个可攻略角色，阿蜜拉姐弟，颜值担当，但性格上并没有什么吸引人的亮点。
+            目前阿尔维奥的任务支线是最多的，但一直都是我在为他做什么，他除了给我两次打折之外，好像都没有真心感谢过我，任务一结束跑得比我还快。（写到这里突然想到我做心愿任务的时候，那些npc都很理直气壮地表示，我想要什么什么，你能不能给我。我：？？？然后当我东奔西走弄到东西送给他们之后，他们也没有很开心的样子。我：……）
+            而姐姐感觉上是想塑造一个天然呆美女，实际给人的感觉却是美且自知，一面抱怨美丽带来的困扰一面享受美丽带来的惠利。虽然剧情里说她工作很努力，可店里卖的东西又很少，大部分时间坐着看书，也没看到在做陶艺。追忆日的时候说她会做一个特殊的陶瓶纪念迷失在沙漠中的人，但我也没看到。（所以到底是有还是没有？）（还有野餐那个❤选项，到底意味着什么也没有明确说明，只是加载画面看到提示说很重要，很重要那我就点了，可点了之后还是不知道意味什么……然后阿尔维奥就说我想打探他姐姐，可我没有啊，我就单纯地欣赏美女给她送送防晒霜不行吗？）
+            总的来说，阿蜜拉的性格人设都太平了，阿尔维奥至少都还有点小商人好坏参半的棱角在，阿蜜拉的定位就很迷，人物图鉴站在最中间，总不能真的从头到尾就是一个花瓶吧？（想到了上一作金吉尔会因为自己身体不好什么都不能为我做觉得抱歉，可能某种意义上她确实是个花瓶，但我愿意去照顾这样的花瓶，但……”因自己过于美丽而烦恼？？“很难让人不觉得这是在凡尔赛啊，然后我安慰她邀请她跳舞放松一下，她觉得我莫名其妙？？跳舞比赛上跳得那么开心我还以为你很喜欢跳舞啊！）
+            然后是欧文，老好人帅哥一个，有钱有颜性格好，照理来说应该是好丈夫高热人选，可是一开始介绍居民的时候就暗示了和阿蜜拉的感情线，他舔阿蜜拉，我舔他，我真是舔狗中的舔狗……于是又让我想起了波西亚真情实感攻略阿尔洛的时候，费劲刷好感，他说有私人问题找我商量我以为他要跟我告白呢，结果他跟诺拉早就有一腿了，来问我要不要在一起。我……我可真是个大冤种。不想再来一次了，所以，算了吧。
+            格蕾丝，人物档案说她做事干净利落聪明干练，但是剧情上体现出来的又没有这种感觉，厨艺不好是真的，但是把厨房烧了？这是聪明干练不是笨手笨脚？和她有关的几个任务都要问你各种问题，可能想表现她的聪明，但实际让人感受到的却是傲慢，让我帮她去遗迹找东西，从头到尾只关心自己的论文，明知道遗迹危险，我不想让她担心选了一点都不危险你上你也行，结果她觉得我在阴阳怪气，我……到底是谁在阴阳怪气啊！
+            埃尔西，本意应该是古灵精怪的小女孩人设，有人吐槽她没教养，我暂不评价，但有一点我印象深刻，甚至于促使我要来写这么长的评论。我一开始是很喜欢这个小女孩的，确实是建模太可爱了。一开始她和米安关系好，任务也都是跟米安有关的，偷执照虽然不成熟，但是本意是为了米安，有点熊但心不坏，至少是符合她资料里的描述的——”她讨厌看到任何人被欺负，是一个非常忠诚的朋友“，可实际上，她会在背后吐槽梅森有怪味，当你和她的好感刷到朋友之后，她会说”你和米安是在竞争做我最好的朋友吗“这种话。这么一看她资料里的那句话简直像在讽刺。我甚至怀疑写台词的人根本没看基本人设。如果说这句话换成”米安是我最好的朋友，但你和她一样好……嘿！谁说最好的朋友不能有两个呢？我决定了！你们都是我最好的朋友。“是不是会更符合人设一点呢？
+            海蒂，又一个黑皮姐姐，这一作黑皮实在太多了也可能是人物总量太少？感觉攻略范围内不是白瘦幼妹妹就是黑皮御姐，人设也都差不多，性格上都平平无奇。个个标签都是认真努力工作，不像波西亚，有假小子，有爱美的，有一边养家一边追逐梦想的，有身残志坚的，有御姐有邻家小妹……埃尔西虽然性格长歪了，但居然已经是里面最出挑的一个了。其实我原本觉得海蒂一家性格都挺好的，都是”好人“，可又”好得很普通“，没什么存在感。波西亚里连六娃这样没有存在感的存在都还有一个”没有存在感“的记忆点，沙石镇里我真的会玩着玩着，就忘记还有哪些人……
+            齐衡，嗯……吐槽他性格的很多，我原本觉得制作组是想营造理科直男的硬核浪漫之类的反差萌的，然后就和其他角色一样，写得不好写崩了，变成了一个单纯的冷漠毒舌没教养直男。但是明明是可攻略角色，刷好感居然没任何卵用，连乌鸦小叉的关系网都有家人朋友，他却没有，占据光盘研究这么重要的功能性npc，他实质上完全”没用“？！说实话这个人物换成一个固定在地上的”光盘研究机器“也毫无违和，还不会因为态度不好被玩家吐槽。
+            另一个高人气边缘人物房医生，基本平时没有交集，想刷好感一定要特意去找才行，只能说好在是个哑巴帅哥的人设，不然以制作组的文案，估计会是一个帅哥脸的小叉。但是随着关系的加深，哑巴也不能一辈子哑巴吧，他现在能用”嗯、哦“几个字打发我，但我要是真的攻略到他了，我也不想自己在他心里的地位比只鸟都不如啊。
+            欧内斯特，其实人设是丰富的，阿塔拉的记者，写了很多小说，但都被当成儿童读物，还要被素馨吐槽。记忆点有了，但目前依然没有存在感，平时也找不到人在哪，采访我的时候，明明是认真回答的，还要被写信骂一顿，确实难受。我是真的觉得洛根英俊潇洒气度不凡啊！为什么说我乱讲？（虽然他现在还没露脸，但是如果后期剧情他的建模不好看的话，我可能会气得骂街。毕竟我是从波西亚一纸通缉令专门追到沙石镇来卧底捉拿洛根并把他带回家当老婆的。当然他的小弟春也挺好看的，最好也能带回家……）
+            总的来说，沙石镇的人物塑造确实有很多问题，不知道是编剧换人了还是怎么样，台词让人不舒服的地方太多了。
+            导致明明是该让人喜欢的角色却让人喜欢不起来，目前越是着墨多的角色就越让人不喜欢，反而是安安静静当背景的房医生梅丁洛根这些因为没什么交集，所以观感反而不错。
+            至于颜和库珀这种丑角，设计出来就是为了让人讨厌的角色，我觉得还挺好的，有人骂，说明有效果了。（我其实并不讨厌库珀，可能他不是完全意义上的好人，但有好有坏，很真实，刚认识就告诉你有事都是老婆说了算，还有玛贝尔说她第一天到沙石镇的时候，库珀在前面赶车，害羞得不敢抬头看她，但她忘不了他英俊的脸。怎么说呢，磕到了磕到了。）
+            前作波西亚的时候，我也不讨厌希金斯，虽然他也坑过我，但我仍觉得这是一个有魅力的角色，穷苦出身辛勤工作，赚来的钱都反哺给了自己的家庭，像极了一个普通的父亲、儿子、丈夫。成为朋友之后，会忐忑地问你，我们是不是永远永远永远永远的朋友。所以我从不觉得他是一个反面角色。
+            不过丑角的作用就是最后的反转让人有种出气的爽快，还是希望后续的剧情会有，尤其是彭虎，虽然知道等级刷上去之后早晚会打败他，但也不希望只是简单地数值上打败了他，至少要对得起开局给的下马威一样有专门的剧情动画吧。
+            另外一点，相比于波西亚的人物关系网，沙石镇里的npc更像是几个井水不犯河水的势力集团，薇薇奶奶一家，驼牛场一家，光明协会（刚发现协会四个人只要捐款居然可以无限刷好感，我刷了五万之后个个都是挚友，谁说钱买不来朋友？），民兵团……感觉人和人之间很冷漠，明明都在一个小镇里住了很久，每个人却都自顾自的，比如瑞安设定上是跟阿尔维奥是朋友，还会像个变态一样黏在阿尔维奥背后闻他头发，连过剧情任务的时候也跟着，但完全看不出他们的交集点在哪，日常对话也没有体现，而波西亚里八卦小队几个人也好，喜欢在一起锻炼的几个人也好，是从日常动线上很明确感知到这些人的交集点的。我不需要刻意去了解，只是日常经过见了几次，我就知道，哦，这几个是朋友。
+            整体感受，还是前面所说的，沙石镇比波西亚缺少了一种氛围感，说得玄一点就是没有灵魂。优化BUG这些技术问题，愿意花时间精力总是能改好的，但一个作品能让人喜爱的核心是什么呢？联机种田？这不是我从波西亚追到沙石镇的理由。锦上添花固然不错，有了技术丢了情怀就是舍本逐末了。
+            我为波西亚通过宵流过泪，所以就算78买的是个波西亚-沙石镇DLC我也觉得值得。
+            但是疾风镇？岩石城？阿塔拉？
+            到那时候才知道我到底愿不愿意为沙石镇付费。
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<!--底部信息-->
+<div class="bottom-information-body">
+    <!--title-->
+    <div style="width: 100%;display: flex;justify-content: space-between;">
+        <div class="title-img">
+            <img style="padding-right: 10px;" src="images/bottom-information/QQ_tencent-qq.svg" alt="">
+            <img style="padding-right: 10px;" src="images/bottom-information/wechat.svg" alt="">
+            <img style="padding-right: 10px;" src="images/bottom-information/weibo.svg" alt="">
+        </div>
+        <div class="to-top">
+            <a href="#top"><img style="width: 40px;" src="images/bottom-information/to-top.svg" alt="回到顶部" title="回到顶部"></a>
+        </div>
+
+    </div>
+
+    <!--信息-->
+    <div class="lianxi-body">
+        <!--开发联系方式-->
+        <div>
+            <h4 style="color: #8d8d8d;font-size: 0.9em;">开发者信息</h4>
+            <div style="display: flex;">
+                <div class="lieming">
+                    <h4>name：</h4>
+
+                </div>
+                <div class="lianxi-information">
+                    <h4>Zheng Haoyang</h4>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!--资源-->
+        <div style="padding-top: 30px;border-bottom: 1px #505050 solid;padding-bottom: 30px">
+            <h4 style="color: #8d8d8d;font-size: 0.9em;">资源</h4>
+            <div style="display: flex;">
+                <div class="ziyuan-body">
+                    <a href="https://www.epicgames.com/affiliate/en-US/overview">创作者支持计划</a>
+                    <a href="https://store.epicgames.com/zh-CN/publish">在BG Game上分发布</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/careers">职业</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/about">公司</a>
+                    <a href="https://store.epicgames.com/zh-CN/eula">授权协议</a>
+                </div>
+                <div class="ziyuan-body" style="padding-left: 30px">
+                    <a href="https://dev.epicgames.com/zh-CN/home">在线服务</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/community-rules">社区守则</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/ux">用户体验调查</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/fan-art-policy">爱好者作品政策</a>
+                </div>
+            </div>
+        </div>
+
+        <!--服务条款 隐私政策 商店政策-->
+        <div style="display: flex;justify-content: space-between;align-items: center">
+            <div class="bottom-information-end-body">
+                <a href="https://www.epicgames.com/site/zh-CN/tos">隐私条款</a>
+                <a style="padding-left: 15px;" href="https://www.epicgames.com/site/zh-CN/privacypolicy">隐私政策</a>
+                <a style="padding-left: 15px;"
+                   href="https://www.epicgames.com/site/zh-CN/store-refund-policy">商店退款政策</a>
+            </div>
+            <div class="bottom-information-img">
+                <img src="images/navigation/navigation_top/icon_shangbiao2.png" alt="">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+
+    // 注册判断
+    function check_register() {
+        var re_emailPat = /^(.+)@(.+)$/;
+        var re_emailStr = register_form.register_email.value;
+        if (!re_emailStr.match(re_emailPat)) {
+            alert("电子邮件地址必须包括 ( @ 和 . )");
+            register_form.register_email.focus();
+            return;
+        } else if (register_form.register_password.value == "") {
+            alert("密码不能为空");
+            register_form.register_password.focus();
+            return;
+        } else {
+            // register_form.submit();
+            alert("注册成功。");
+            // register_form.register_password.focus();
+            // return;
+        }
+    }
+
+    //登录判断
+    function check_join() {
+        var jo_emailStr = join_form.join_email.value;
+        var jo_password = join_form.join_password.value;
+        var emailPat = /^(.+)@(.+)$/;
+        if (!jo_emailStr.match(emailPat)) {
+            alert("请输入正确的电子邮件地址，必须包括 ( @ 和 . )");
+            join_form.join_email.focus();
+            return;
+        } else if (jo_password == "") {
+            alert("请输入您的密码！");
+            join_form.join_password.focus();
+            return;
+        } else {
+            register_form.submit();
+        }
+    }
+
+
+    // 验证密码强度S
+    // 有小写字母，数字，其他字符，级别+1
+    var inp1 = document.getElementById("register_password");
+    var strength = document.getElementById("strength");
+    var strengthLevel = document.getElementById("strengthLevel");
+    var arr = ["", "低", "中", "高"];
+    inp1.onkeyup = function () {
+        // 获取用户输入内容
+        // 记录安全级别
+        var level = 0;
+        // 正则表达式判断输入的东西
+        // 小写字母，级别+1
+        if (/[a-z]/.test(this.value)) {
+            level++;
+        }
+        // 数字+1
+        if (/[0-9]/.test(this.value)) {
+            level++;
+        }
+        // 其他+1
+        if (/[^a-z0-9]/.test(this.value)) {
+            level++;
+        }
+        strength.innerHTML = arr[level];
+        strengthLevel.className = "strengthLv" + level;
+    };
+    // 验证密码强度E
+
+
+    <!--切换js-->
+    var $active_change_click = $(' .my_carousel-indicators');
+    $active_change_click.each(function (index) {
+        $('.carousel').on('slide.bs.carousel', function () {
+
+            $('.active_change').removeClass('active_change')
+                .next().addClass('active_change');
+            // console.log($('.active_change').next());
+            if ($('.active_change').length == 0) {
+                $('.my_carousel-indicators div:nth-child(1)').addClass('active_change')
+            }
+        })
+
+        $('.my_carousel-indicators div').on('click', function () {
+            $(this).prev().addClass('active_change')
+                .siblings().removeClass('active_change');
+        })
+    })
+
+
+</script>
+
+
+</body>
+</html>

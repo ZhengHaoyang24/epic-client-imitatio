@@ -1,0 +1,271 @@
+@import "page.css";
+
+
+/* 弹窗 */
+/* 黑色背景 */
+#join_background {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    overflow-x: hidden;
+}
+
+/* 透明背景 */
+.join_ {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53, 53, 53, 0);
+}
+
+.join_content {
+    border-radius: 10px;
+    margin: auto;
+    width: 500px;
+    height: 650px;
+    background-color: rgb(27, 27, 27);
+}
+
+/* 登录商标div */
+.join_shangbiao {
+    /* display: flex; */
+    text-align: center;
+    width: 100%;
+    height: 20%;
+    background-color: rgb(27, 27, 27);
+}
+
+.join_shangbiao img {
+    /* margin-top: 50px; */
+    /* height: 200%;
+    width: 100%; */
+    width: 50%;
+    height: 90%;
+
+}
+
+
+/* 登录选项卡 */
+.join_style_con {
+    /* display: -webkit-flex; */
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 10%;
+    background-color: rgb(27, 27, 27);
+}
+
+.join_style_con a {
+    text-decoration: none;
+}
+
+.join_style_list {
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.4em;
+
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+
+    width: 200px;
+    height: 60px;
+    border: 2px solid rgb(0, 140, 255);
+    background-color: rgb(133, 133, 133);
+}
+
+
+.active {
+    background-color: rgb(0, 113, 241);
+}
+
+.card-body {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-top: 2px rgb(94, 94, 94) solid;
+    background-color: rgb(27, 27, 27);
+}
+
+.card_denglu {
+    width: 100%;
+    height: auto;
+    /* border: #fff 1px solid; */
+    background-color: rgb(27, 27, 27);
+}
+
+
+
+/* 登陆输入框 */
+.join_input {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+}
+
+.join_input input {
+    outline: none;
+    margin-top: 20px;
+    width: 90%;
+    height: 50px;
+    margin-left: 5%;
+    background-color: rgb(27, 27, 27);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 3px;
+}
+
+.join_input input:focus {
+    outline: none;
+    border: 2px solid rgb(0, 140, 255);
+    border-radius: 3px;
+}
+
+/* 用games账号登录 */
+.join_style {
+    width: 100%;
+    height: 40px;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.join_button {
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    margin-left: 17%;
+    height: 10%;
+}
+
+.join_button button {
+    outline: none;
+    margin-top: 20px;
+    width: 45%;
+    height: 50px;
+    background-color: rgb(1, 112, 216);
+    color: white;
+}
+
+/* 登录底部文字 */
+.join_buttom-text1 {
+    width: 100%;
+    height: 4%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.join_buttom-text2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* 注册 */
+.card_zhuce {
+    width: 100%;
+    height: auto;
+    /* border: rgb(230, 13, 13) 1px solid; */
+}
+
+.card_zhuce>div {
+    margin-top: 20px;
+}
+
+/* 注册地区 */
+.select_area_div {
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    height: 50px;
+    margin-left: 17%;
+    border: #fff 2px solid;
+    background-color: rgb(27, 27, 27);
+}
+
+.select_area_div h3 {
+    margin: auto auto;
+    color: white;
+}
+
+.select_area_div>select {
+    width: 40%;
+    font-size: 1.2em;
+    /* background-color: rgb(0, 113, 241); */
+    font-weight: 500;
+    background-color: rgb(27, 27, 27);
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: 0;
+}
+
+/* 注册下方选择 */
+.danxuan_join1 {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    color: rgb(255, 255, 255);
+    width: 70%;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 15%;
+    /* border: 1px rebeccapurple solid; */
+}
+
+
+
+
+
+
+/* 验证密码强度S */
+.strengthLv1 {
+    background-color: red;
+    height: 3px;
+    width: 80px;
+    /*border: 1px solid #ccc;*/
+    padding: 2px;
+}
+
+.strengthLv2 {
+    background-color: #007bff;
+    height: 3px;
+    width: 160px;
+    /*border: 1px solid #ccc;*/
+    padding: 2px;
+}
+
+.strengthLv3 {
+    background-color: #00d200;
+    height: 3px;
+    width: 240px;
+    /*border: 1px solid #ccc;*/
+    padding: 2px;
+}
+
+.pass_wrap{
+    margin-left: 20px;
+    color: white;
+    /*padding-top: 20px;*/
+    width: 90%;
+}
+
+

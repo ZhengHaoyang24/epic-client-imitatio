@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>帮助</title>
+
+    <link rel="stylesheet" href="css/bootstrap/4/bootstrap.css">
+    <link rel="stylesheet" href="css/public/navigation.css">
+    <link rel="stylesheet" href="css/public/join.css">
+    <link rel="stylesheet" href="css/public/bottomInformation.css">
+    <link rel="stylesheet" href="css/Top/help/help.css">
+    <!--蓝色为  rgb(24, 132, 253);      #1884FD      -->
+    <!-- 总体颜色为    background-color: rgb(15, 15, 15); -->
+    <!--黑色底     background-color: #2d2d2d;-->
+    <script src="js/bootstrap/4/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap/4/bootstrap.bundle.min.js"></script>
+    <script src="js/myJs.js"></script>
+
+
+</head>
+<body>
+
+<!--public-->
+<!--cover覆盖登录框-->
+<div id="join-cover-body">
+    <h1 style="cursor: pointer;" onclick="document.getElementById('join_background').style.display='block'">登录</h1>
+    <h2><a href="MyInformation.html">账户信息</a></h2>
+    <h2><a href="HopeList.html">愿望单</a></h2>
+    <h2><a href="ShopingCart.html">购物车</a></h2>
+    <div style="border-top: 1px #666666 solid;"><a style="color: #c4c4c4;font-size:1em;" href="">退出</a></div>
+</div>
+<!--账号登录 弹出框-->
+<div id="join_background">
+    <div class="join_">
+        <!-- 页面内容 -->
+        <div class="join_content">
+            <!-- 商标 -->
+            <div class="join_shangbiao">
+                <img src="images/navigation/navigation_top/icon_shangbiao2.png" alt="">
+            </div>
+            <!-- 上方选项卡 -->
+            <div class="join_style_con">
+                <!-- <a href=""> -->
+                <div class="active  join_style_list">
+                    Games账号登录
+                </div>
+                <!-- </a> -->
+
+                <!-- <a href=""> -->
+                <div class="join_style_list">
+                    注册Games账号
+                </div>
+                <!-- </a> -->
+
+            </div>
+            <!-- 登录与注册内容 -->
+            <div class="card-body">
+                <!-- 登录页面 -->
+                <div class="card_denglu ">
+                    <div class="join_input">
+
+                        <form id="join_form">
+                            <input id=join_email" type="text" name="join_email" placeholder="    电子邮件地址"/>
+                            <input id="join_password" type="password" name="join_password" placeholder="    密码"/>
+                        </form>
+                    </div>
+
+
+                    <div class="join_button">
+                        <button onclick="check_join()">现在登录</button>
+                        <button
+                                onclick="document.getElementById('join_background').style.display='none'">取消登录
+                        </button>
+
+                    </div>
+                    <div class="join_buttom-text1" style="margin-top: 90px;">
+                        <a style="color: rgb(255, 255, 255);text-decoration: underline;"
+                           href="https://www.epicgames.com/site/zh-CN/privacypolicy?lang=zh-Hans"
+                           target="_blank">隐私政策</a>
+
+                    </div>
+                    <div class="join_buttom-text2">
+                        <h3 style="color: rgb(255, 255, 255);font-size: 1em;">想要了解我们？<a style="color: rgb(255, 255, 255);font-size: 1em;
+                            text-decoration: underline;"
+                                                                                        href="https://www.epicgames.com/site/zh-CN/epic-games-store-faq?lang=zh-CN"
+                                                                                        target="_blank">关于我们</a>
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- 注册页面 -->
+                <div class="card_zhuce" style="display:none;">
+                    <div class="select_area_div">
+                        <h3>国家地区</h3>
+                        <select id="group" value="1">
+                            <option value="1">中国大陆</option>
+                            <option value="2">中国台湾</option>
+                            <option value="3">中国香港/澳门</option>
+                            <option value="4">美国</option>
+                            <option value="5">日本</option>
+                            <option value="6">韩国</option>
+                            <option value="7">英国</option>
+                            <option value="2">德国</option>
+                        </select>
+                    </div>
+
+                    <div class="join_input">
+
+                        <form id="register_form">
+                            <input id="register_email" type="email" name="register_email" placeholder="    电子邮件地址"/>
+                            <input id="register_password" type="password" name="register_password"
+                                   placeholder="    密码"/>
+                            <div class="pass_wrap">
+                                <em>密码强度：</em>
+                                <em id="strength">高</em>
+                                <div id="strengthLevel" class="strengthLv0"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="join_button ">
+                        <button onclick="check_register()">现在注册</button>
+                        <button
+                                onclick="document.getElementById('join_background').style.display='none'">取消注册
+                        </button>
+
+                    </div>
+                    <div class="danxuan_join1">
+                        <input type="radio" style="margin-right: 10px;">我想收到来自Games的消息、问卷调查和特惠。
+
+                    </div>
+                    <div class="danxuan_join1">
+                        <input type="radio" style="margin-right: 10px;">我已阅读并同意<a
+                            style="text-decoration:underline;color: rgb(255, 255, 255);"
+                            href="https://www.epicgames.com/site/zh-CN/privacypolicy?lang=zh-Hans"
+                            target="_blank">隐私政策</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--顶部导航-->
+<div class="title_navigation">
+
+    <!--商标-->
+    <img src="images/navigation/navigation_top/icon_shangbiao2.png" alt="">
+    <!--中间-->
+    <div class="navigation_content_1">
+        <a id="top" href="index_Store.html">
+            <div>
+                商城
+            </div>
+        </a>
+        <a href="Problem.html">
+            <div>常见问题</div>
+        </a>
+        <a href="Help.html">
+            <div style="color: #fff;;vertical-align:center;border-bottom: 5px rgb(0, 107, 230) solid;">帮助</div>
+        </a>
+    </div>
+
+    <!--账户-->
+    <!--    <a href="#" title="登录账号" >-->
+    <div class="my-count-body" onclick="showDiv()" onclick="hideDiv()">
+        <img src="images/navigation/navigation_top/myself.png" alt="" style="width: 30px">
+        <h3 style="margin-left: 10px;color: white;">MICHEAL</h3>
+    </div>
+</div>
+
+<!--public-->
+
+<div class="title-body">
+    <div class="title-content">
+        <h1 style="padding-top: 70px;color:white;font-size: 3em; ">欢迎来到 Games 玩家支持！</h1>
+        <div style="width: 100%;height: 50px;"></div>
+        <div id="div" class="help-search_input" tabindex="111" onfocus="">
+            <img src="images/Help/icon/sousuo.svg">
+            <input onfocusin="OnFocus()" onfocusout="OutFocus()" type='text' placeholder="  搜索帮助中心......">
+        </div>
+        <div style="width: 100%;height: 60px;"></div>
+    </div>
+</div>
+
+<!--内容-->
+<div class="help-content-body">
+    <!--标题-->
+    <div style="width: 100%;height: auto;margin-top: 60px;margin-bottom: 40px;">
+        <h2>共同话题</h2>
+    </div>
+    <!--1-->
+    <div class="a-content-list">
+        <div class="a-body">
+            <a href="">
+                <li>我如何从Epic游戏商城兑换免费的 1 个月 Discord Nitro 订阅？
+                    <h6 style="display: inline;color:rgb(24, 132, 253); ">阅读更多</h6>
+                </li>
+            </a>
+        </div>
+        <div class="a-body">
+            <a href="">
+                <li>对 Epic Games 启动程序问题进行故障排除
+                    <h6 style="display: inline;color:rgb(24, 132, 253); ">阅读更多</h6>
+                </li>
+            </a>
+        </div>
+        <div class="a-body">
+            <a href="">
+                <li>我如何更改 Epic Games 账户上的国家/地区信息？
+                    <h6 style="display: inline;color:rgb(24, 132, 253); ">阅读更多</h6>
+                </li>
+            </a>
+        </div>
+    </div>
+    <!--2-->
+    <div class="a-content-list">
+        <div class="a-body">
+            <a href="">
+                <li>如何将 Twitch 个人资料关联到我的 Epic Games 账户上？
+                    <h6 style="display: inline;color:rgb(24, 132, 253); ">阅读更多</h6>
+                </li>
+            </a>
+        </div>
+        <div class="a-body">
+            <a href="">
+                <li>双重认证以及启用方法
+                    <h6 style="display: inline;color:rgb(24, 132, 253); ">阅读更多</h6>
+                </li>
+            </a>
+        </div>
+        <div class="a-body">
+            <a href="">
+                <li>如何将主机或平台账户升级为完整的 Epic Games 账户？
+                    <h6 style="display: inline;color:rgb(24, 132, 253); ">阅读更多</h6>
+                </li>
+            </a>
+        </div>
+    </div>
+    <!--3-->
+    <div class="a-content-list">
+        <div class="a-body">
+            <a href="">
+                <li>"此 Epic 账户曾经被关联于另一个外部账户" 错误
+                    <h6 style="display: inline;color:rgb(24, 132, 253); ">阅读更多</h6>
+                </li>
+            </a>
+        </div>
+        <div class="a-body">
+            <a href="">
+                <li>How to fix Fortnite crash and technical issues
+                    <h6 style="display: inline;color:rgb(24, 132, 253); ">阅读更多</h6>
+                </li>
+            </a>
+        </div>
+        <div class="a-body">
+            <a href="">
+                <li>我如何在网页上将主机账户关联至 Epic Games 账户？
+                    <h6 style="display: inline;color:rgb(24, 132, 253); ">阅读更多</h6>
+                </li>
+            </a>
+        </div>
+    </div>
+
+
+    <!--你需要哪种产品的帮助？-->
+    <div class="help-prduction-body">
+        <!--标题-->
+        <div style="width: 100%;height: auto;margin-top: 60px;margin-bottom: 40px;">
+            <h2>你需要哪种产品的帮助？</h2>
+        </div>
+
+        <!--图片-->
+        <div class="img-production">
+            <!--1-->
+            <div class="img-1-body">
+                <div class="img-1">
+                    <img src="images/Help/img/row1-img1.jpg" alt="">
+                    <div class="cover-text-body">
+                        堡垒之夜
+                    </div>
+                </div>
+                <div class="img-1">
+                    <img src="images/Help/img/row1-img2.png" alt="" style="z-index: 99">
+                    <div class="cover-text-body">
+                        Epic 游戏商城
+                    </div>
+                </div>
+            </div>
+            <!--2-->
+            <div class="img-1-body">
+                <div class="img-2">
+                    <img src="images/Help/img/row2-img1.png" alt="">
+                    <div class="cover-text-body">
+                        账户
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row2-img2.png" alt="">
+                    <div class="cover-text-body">
+                        付款
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row2-img3.png" alt="">
+                    <div class="cover-text-body">
+                        技术
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row2-img4.png" alt="">
+                    <div class="cover-text-body">
+                        创作者支持
+                    </div>
+                </div>
+
+            </div>
+            <!--3-->
+            <div class="img-1-body">
+                <div class="img-2">
+                    <img src="images/Help/img/row3-img1.png" alt="">
+                    <div class="cover-text-body">
+                        虚幻引擎
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row3-img2.png" alt="">
+                    <div class="cover-text-body">
+                        虚幻商城
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row3-img3.png" alt="">
+                    <div class="cover-text-body">
+                        TWINMOTION
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row3-img4.png" alt="">
+                    <div class="cover-text-body">
+                        《ROCKET LEAGUE》
+                    </div>
+                </div>
+
+            </div>
+            <!--4-->
+            <div class="img-1-body">
+                <div class="img-2">
+                    <img src="images/Help/img/row4-img1.png" alt="">
+                    <div class="cover-text-body">
+                        《破阵者》
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row4-img2.png" alt="">
+                    <div class="cover-text-body">
+                        《SHADOW COMPLEX》
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row4-img3.png" alt="">
+                    <div class="cover-text-body">
+                        《UNREAL TOURNAMENT》
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row4-img4.jpg" alt="">
+                    <div class="cover-text-body">
+                        EPIC ONLINE
+                    </div>
+                </div>
+
+            </div>
+            <!--5-->
+            <div class="img-1-body">
+                <div class="img-2">
+                    <img src="images/Help/img/row5-img1.jpg" alt="">
+                    <div class="cover-text-body">
+                        《ALAN WAKE》
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row5-img2.jpg" alt="">
+                    <div class="cover-text-body">
+                        《KID A MNESIA EXHIBITION》
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row5-img3.jpg" alt="">
+                    <div class="cover-text-body">
+                        《FALL GUYS》
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row5-img4.jpg" alt="">
+                    <div class="cover-text-body">
+                        《RUMBLEVERSE》
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--小于 700px 出现-->
+        <div class="max-700px-img-production">
+            <!--1-->
+            <div class="img-1">
+                <img src="images/Help/img/row1-img1.jpg" alt="">
+                <div class="cover-text-body">
+                    堡垒之夜
+                </div>
+            </div>
+            <!--2-->
+            <div class="img-1">
+                <img src="images/Help/img/row1-img2.png" alt="" style="z-index: 99">
+                <div class="cover-text-body">
+                    Epic 游戏商城
+                </div>
+            </div>
+            <!--3-->
+            <div class="max-700-img-1-body">
+                <div class="img-2">
+                    <img src="images/Help/img/row2-img1.png" alt="">
+                    <div class="cover-text-body">
+                        账户
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row2-img2.png" alt="">
+                    <div class="cover-text-body">
+                        付款
+                    </div>
+                </div>
+            </div>
+            <!--4-->
+            <div class="max-700-img-1-body">
+                <div class="img-2">
+                    <img src="images/Help/img/row2-img3.png" alt="">
+                    <div class="cover-text-body">
+                        技术
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row2-img4.png" alt="">
+                    <div class="cover-text-body">
+                        创作者支持
+                    </div>
+                </div>
+
+            </div>
+            <!--5-->
+            <div class="max-700-img-1-body">
+                <div class="img-2">
+                    <img src="images/Help/img/row3-img1.png" alt="">
+                    <div class="cover-text-body">
+                        虚幻引擎
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row3-img2.png" alt="">
+                    <div class="cover-text-body">
+                        虚幻商城
+                    </div>
+                </div>
+
+            </div>
+            <!--6-->
+            <div class="max-700-img-1-body">
+                <div class="img-2">
+                    <img src="images/Help/img/row3-img3.png" alt="">
+                    <div class="cover-text-body">
+                        TWINMOTION
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row3-img4.png" alt="">
+                    <div class="cover-text-body">
+                        《ROCKET LEAGUE》
+                    </div>
+                </div>
+
+            </div>
+            <!--7-->
+            <div class="max-700-img-1-body">
+                <div class="img-2">
+                    <img src="images/Help/img/row4-img1.png" alt="">
+                    <div class="cover-text-body">
+                        《破阵者》
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row4-img2.png" alt="">
+                    <div class="cover-text-body">
+                        《SHADOW COMPLEX》
+                    </div>
+                </div>
+
+            </div>
+            <!--8-->
+            <div class="max-700-img-1-body">
+                <div class="img-2">
+                    <img src="images/Help/img/row4-img3.png" alt="">
+                    <div class="cover-text-body">
+                        《UNREAL TOURNAMENT》
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row4-img4.jpg" alt="">
+                    <div class="cover-text-body">
+                        EPIC ONLINE
+                    </div>
+                </div>
+
+            </div>
+            <!--9-->
+            <div class="max-700-img-1-body">
+                <div class="img-2">
+                    <img src="images/Help/img/row5-img1.jpg" alt="">
+                    <div class="cover-text-body">
+                        《ALAN WAKE》
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row5-img2.jpg" alt="">
+                    <div class="cover-text-body">
+                        《KID A MNESIA EXHIBITION》
+                    </div>
+                </div>
+
+            </div>
+            <!--10-->
+            <div class="max-700-img-1-body">
+                <div class="img-2">
+                    <img src="images/Help/img/row5-img3.jpg" alt="">
+                    <div class="cover-text-body">
+                        《FALL GUYS》
+                    </div>
+                </div>
+                <div class="img-2">
+                    <img src="images/Help/img/row5-img4.jpg" alt="">
+                    <div class="cover-text-body">
+                        《RUMBLEVERSE》
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<!--底部信息-->
+<div class="bottom-information-body">
+    <!--title-->
+    <div style="width: 100%;display: flex;justify-content: space-between;">
+        <div class="title-img">
+            <img style="padding-right: 10px;" src="images/bottom-information/QQ_tencent-qq.svg" alt="">
+            <img style="padding-right: 10px;" src="images/bottom-information/wechat.svg" alt="">
+            <img style="padding-right: 10px;" src="images/bottom-information/weibo.svg" alt="">
+        </div>
+        <div class="to-top">
+            <a href="#top"><img style="width: 40px;" src="images/bottom-information/to-top.svg" alt="回到顶部" title="回到顶部"></a>
+        </div>
+
+    </div>
+
+    <!--信息-->
+    <div class="lianxi-body">
+        <!--开发联系方式-->
+        <div>
+            <h4 style="color: #8d8d8d;font-size: 0.9em;">开发者信息</h4>
+            <div style="display: flex;">
+                <div class="lieming">
+                    <h4>name：</h4>
+
+                </div>
+                <div class="lianxi-information">
+                    <h4>Zheng Haoyang</h4>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!--资源-->
+        <div style="padding-top: 30px;border-bottom: 1px #505050 solid;padding-bottom: 30px">
+            <h4 style="color: #8d8d8d;font-size: 0.9em;">资源</h4>
+            <div style="display: flex;">
+                <div class="ziyuan-body">
+                    <a href="https://www.epicgames.com/affiliate/en-US/overview">创作者支持计划</a>
+                    <a href="https://store.epicgames.com/zh-CN/publish">在BG Game上分发布</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/careers">职业</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/about">公司</a>
+                    <a href="https://store.epicgames.com/zh-CN/eula">授权协议</a>
+                </div>
+                <div class="ziyuan-body" style="padding-left: 30px">
+                    <a href="https://dev.epicgames.com/zh-CN/home">在线服务</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/community-rules">社区守则</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/ux">用户体验调查</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/fan-art-policy">爱好者作品政策</a>
+                </div>
+            </div>
+        </div>
+
+        <!--服务条款 隐私政策 商店政策-->
+        <div style="display: flex;justify-content: space-between;align-items: center">
+            <div class="bottom-information-end-body">
+                <a href="https://www.epicgames.com/site/zh-CN/tos">隐私条款</a>
+                <a style="padding-left: 15px;" href="https://www.epicgames.com/site/zh-CN/privacypolicy">隐私政策</a>
+                <a style="padding-left: 15px;"
+                   href="https://www.epicgames.com/site/zh-CN/store-refund-policy">商店退款政策</a>
+            </div>
+            <div class="bottom-information-img">
+                <img src="images/navigation/navigation_top/icon_shangbiao2.png" alt="">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script>
+
+    // 搜索样式
+    var div = document.getElementById('div'); //获取div元素对象
+    function OnFocus() {
+        div.style.border = "2px solid rgb(0, 0, 0)"; //给div元素对象添加样式
+        div.style.outline = "2px solid white"; //给div元素对象添加样式
+    }
+
+    function OutFocus() {
+        div.style.border = "2px solid  #565656"; //给div元素对象添加样式
+        div.style.outline = "2px solid  #565656"; //给div元素对象添加样式
+    }
+
+
+</script>
+
+</body>
+</html>

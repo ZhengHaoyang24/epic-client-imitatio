@@ -1,0 +1,280 @@
+.hope-content-body {
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    /*border: 1px red solid;*/
+}
+
+/**/
+/*左*/
+/**/
+.hope-zuo-content-body {
+    width: 100%;
+    height: auto;
+    /*border: 1px red solid;*/
+}
+
+/*标题*/
+.hope-title-body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hope-title-body > h1 {
+    color: white;
+    font-weight: 400;
+    font-size: 2.6em;
+}
+
+
+/*开关 body*/
+.xuanze-body {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.xuanze-body > h4 {
+    padding-left: 20px;
+    color: #8f8f8f;
+    font-size: 1em;
+    margin: 0;
+}
+
+/*开关按钮*/
+input[type="checkbox"] {
+    appearance: none;
+    width: 64px;
+    height: 30px;
+    position: relative;
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: #777;
+}
+
+input[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: white;
+    left: 2px;
+    top: 1px;
+    border-radius: 50%;
+    transition: left cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+}
+
+input[type="checkbox"]:after {
+    content: "开 关";
+    text-indent: 12px;
+    word-spacing: 4px;
+    display: inline-block;
+    white-space: nowrap;
+    color: white;
+    font: 14px/30px monospace;
+    font-weight: bold;
+}
+
+input[type="checkbox"]:hover:before {
+    box-shadow: inset 0px 0px 5px 0px black;
+}
+
+input[type="checkbox"]:checked {
+    background-color: rgb(24, 132, 253);
+}
+
+input[type="checkbox"]:checked:before {
+    left: 34px;
+}
+
+input[type="checkbox"]:checked:after {
+    color: black;
+}
+
+
+/*游戏内容*/
+.game-list {
+    display: flex;
+    padding: 20px;
+    background-color: #2d2d2d;
+    width: auto;
+    height: 200px;
+    border-radius: 5px;
+}
+.game-list:hover{
+    background-color: #3d3d3d;
+}
+
+/*图片*/
+.game-list > img {
+    border-radius: 5px;
+    height: 100%;
+}
+
+/*文字内容*/
+.text-content {
+    padding-left: 10px;
+    width: 100%;
+    /*border: 1px red solid;*/
+}
+
+/*按钮*/
+.button-body {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    /*border: 1px red solid;*/
+    margin-top: 45px;
+}
+/*.hope-button {*/
+/*    width: auto;*/
+/*    height: 50px;*/
+/*    background-color: rgba(15, 15, 15, 0);*/
+/*    border: 1px #8c8c8c solid;*/
+/*    color: white;*/
+/*}*/
+.button-body button{
+    width: auto;
+    height: 50px;
+    background-color: rgba(15, 15, 15, 0);
+    border: 2px #7c7c7c solid;
+    color: white;
+}
+.button-body button:hover {
+    background-color: rgb(79, 79, 79);
+}
+.button-body button:active {
+    border: 2px #dadada solid;
+}
+
+/*右边div*/
+/**/
+.hope-you-content-body {
+    width: auto;
+    height: auto;
+    padding-left: 25px;
+}
+
+.library_body_dropdown {
+    width: 220px;
+    height: 100%;
+    /*border: 1px solid #0d10bf;*/
+}
+
+/*筛选器器*/
+.library_body_dropdown > h5 {
+    color: white;
+    font-size: 1em;
+}
+
+/* 搜索框 */
+.search_input_library {
+    width: 100%;
+    min-width: 150px;
+    height: 35px;
+    /*margin-left: 5%;*/
+    border-radius: 5px;
+    display: flex;
+    /* background-color: rgb(206, 38, 38); */
+    background-color: rgb(47, 47, 47);
+}
+
+.search_input_library img {
+    transform: scale(0.8, 0.8);
+    height: 100%;
+}
+
+.search_input_library input[type="text"] {
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 600;
+    outline: 0;
+    color: rgb(247, 247, 247);
+    border-radius: 18px;
+    border: 0px;
+    background-color: rgb(47, 47, 47);
+}
+
+.Collapse-fenlei-library {
+    width: 100%;
+    padding-top: 10px;
+}
+
+/*单个折叠*/
+.collapseExample {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px #474747 solid;
+}
+
+.collapseExample button {
+    background-color: rgb(15, 15, 15);
+    border: 0;
+}
+
+.collapse div:hover {
+    color: #5e5e5e;
+}
+
+.collapseExample button {
+    color: #b8b8b8;
+}
+
+.card-fenlei-library {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    border: 0;
+    border-radius: 0;
+    /*border-top: 1px #474747 solid;*/
+    color: white;
+    padding-left: 0;
+    background-color: rgb(15, 15, 15);
+}
+/*筛选器*/
+/*小于700px出现*/
+.hope-dropdown{
+    display: none;
+}
+.hope-my-dropdown>button{
+    background-color: rgb(15,15,15);
+    border: 1px rgb(15,15,15) solid;
+}
+.hope-dropdown-menu{
+    padding-left: 10px;
+    background-color: #262626;
+}
+.hope-dropdown-menu h6{
+    padding-top: 10px;
+    color: #c7c7c7;
+}
+.hope-dropdown-menu h6:hover{
+    background-color: grey;
+    color: white;
+}
+
+
+
+
+
+/*响应*/
+/**/
+/**/
+
+@media screen and (max-width: 700px){
+    .hope-you-content-body{
+        display: none;
+    }
+    .hope-dropdown{
+        display: block;
+    }
+
+}

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>商店</title>
+
+    <link rel="stylesheet" href="css/bootstrap/4/bootstrap.css">
+    <link rel="stylesheet" href="css/public/navigation.css">
+    <link rel="stylesheet" href="css/public/join.css">
+    <link rel="stylesheet" href="css/Store/advertising-window.css">
+    <link rel="stylesheet" href="css/public/bottomInformation.css">
+    <link rel="stylesheet" href="css/Store/StoreContent.css">
+    <!--蓝色为  rgb(24, 132, 253);      #1884FD      -->
+    <!-- 总体颜色为    background-color: rgb(15, 15, 15); -->
+    <!--黑色底     background-color: #2d2d2d;-->
+    <script src="js/bootstrap/4/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap/4/bootstrap.bundle.min.js"></script>
+    <script src="js/myJs.js"></script>
+
+</head>
+<body>
+
+<!--广告弹窗-->
+<div id="advertise-body">
+
+    <div class="advertise-img-button">
+
+        <div class="advertise-content-body">
+            <img src="images/GameStore/advertise/egs-summer-showcase-carousel-desktop-1920x1080-195535bde07c.jpg" alt="">
+            <div class="cover-advertise-content-body">
+                <div class="advertise-text-body">
+
+                    <!--时间 文字-->
+                    <div class="zhibo_time">
+                        <h1>直播倒计时：<span id="zhibo_time"></span></h1>
+                    </div>
+
+                    <div class="time-text">
+
+                        <h5 style="color: white;">于北京时间<span  id="tomorrow_date"></span>0点整，在Twitch收看2022年的Game Fest的一部分的游戏商城年度游戏展，期待你的参与！</h5>
+                    </div>
+                    <!--按钮-->
+                    <div class="zhidao_body">
+                        <button onclick="document.getElementById('advertise-body').style.display='none'">我知道了</button>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+            
+        </div>
+    </div>
+
+
+</div>
+
+
+<!--public-->
+<!--hover 覆盖登录框-->
+<div id="join-cover-body">
+    <h1 style="cursor: pointer;" onclick="document.getElementById('join_background').style.display='block'">登录</h1>
+    <h2><a href="MyInformation.html">账户信息</a></h2>
+    <h2><a href="HopeList.html">愿望单</a></h2>
+    <h2><a href="ShopingCart.html">购物车</a></h2>
+    <div style="border-top: 1px #666666 solid;"><a style="color: #c4c4c4;font-size:1em;" href="">退出</a></div>
+</div>
+<!--账号登录 弹出框-->
+<div id="join_background">
+    <div class="join_">
+        <!-- 页面内容 -->
+        <div class="join_content">
+            <!-- 商标 -->
+            <div class="join_shangbiao">
+                <img src="images/navigation/navigation_top/icon_shangbiao2.png" alt="">
+            </div>
+            <!-- 上方选项卡 -->
+            <div class="join_style_con">
+                <!-- <a href=""> -->
+                <div class="active  join_style_list">
+                    Games账号登录
+                </div>
+                <!-- </a> -->
+
+                <!-- <a href=""> -->
+                <div class="join_style_list">
+                    注册Games账号
+                </div>
+                <!-- </a> -->
+
+            </div>
+            <!-- 登录与注册内容 -->
+            <div class="card-body" style="background-color: rgb(27,27,27);border-top: 2px rgb(94, 94, 94) solid;">
+                <!-- 登录页面 -->
+                <div class="card_denglu ">
+                    <div class="join_input">
+
+                        <form id="join_form">
+                            <input id=join_email" type="text" name="join_email" placeholder="    电子邮件地址"/>
+                            <input id="join_password" type="password" name="join_password" placeholder="    密码"/>
+                        </form>
+                    </div>
+
+
+                    <div class="join_button">
+                        <button onclick="check_join()">现在登录</button>
+                        <button
+                                onclick="document.getElementById('join_background').style.display='none'">取消登录
+                        </button>
+
+                    </div>
+                    <div class="join_buttom-text1" style="margin-top: 90px;">
+                        <a style="color: rgb(255, 255, 255);text-decoration: underline;"
+                           href="https://www.epicgames.com/site/zh-CN/privacypolicy?lang=zh-Hans"
+                           target="_blank">隐私政策</a>
+
+                    </div>
+                    <div class="join_buttom-text2">
+                        <h3 style="color: rgb(255, 255, 255);font-size: 1em;">想要了解我们？<a style="color: rgb(255, 255, 255);font-size: 1em;
+                            text-decoration: underline;"
+                                                                                        href="https://www.epicgames.com/site/zh-CN/epic-games-store-faq?lang=zh-CN"
+                                                                                        target="_blank">关于我们</a>
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- 注册页面 -->
+                <div class="card_zhuce" style="display:none;">
+                    <div class="select_area_div">
+                        <h3>国家地区</h3>
+                        <select id="group" value="1">
+                            <option value="1">中国大陆</option>
+                            <option value="2">中国台湾</option>
+                            <option value="3">中国香港/澳门</option>
+                            <option value="4">美国</option>
+                            <option value="5">日本</option>
+                            <option value="6">韩国</option>
+                            <option value="7">英国</option>
+                            <option value="2">德国</option>
+                        </select>
+                    </div>
+
+                    <div class="join_input">
+
+                        <form id="register_form">
+                            <input id="register_email" type="email" name="register_email" placeholder="    电子邮件地址"/>
+                            <input id="register_password" type="password" name="register_password"
+                                   placeholder="    密码"/>
+                            <div class="pass_wrap">
+                                <em>密码强度：</em>
+                                <em id="strength">高</em>
+                                <div id="strengthLevel" class="strengthLv0"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="join_button ">
+                        <button onclick="check_register()">现在注册</button>
+                        <button
+                                onclick="document.getElementById('join_background').style.display='none'">取消注册
+                        </button>
+
+                    </div>
+                    <div class="danxuan_join1">
+                        <input type="radio" style="margin-right: 10px;">我想收到来自Games的消息、问卷调查和特惠。
+
+                    </div>
+                    <div class="danxuan_join1">
+                        <input type="radio" style="margin-right: 10px;">我已阅读并同意<a
+                            style="text-decoration:underline;color: rgb(255, 255, 255);"
+                            href="https://www.epicgames.com/site/zh-CN/privacypolicy?lang=zh-Hans"
+                            target="_blank">隐私政策</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--顶部导航-->
+<div class="title_navigation">
+
+    <!--商标-->
+    <img src="images/navigation/navigation_top/icon_shangbiao2.png" alt="">
+    <!--中间-->
+    <div class="navigation_content_1">
+        <a id="top" href="">
+            <div style="color: #fff;;vertical-align:center;border-bottom: 5px rgb(0, 107, 230) solid;">
+                商城
+            </div>
+        </a>
+        <a href="Problem.html">
+            <div>常见问题</div>
+        </a>
+        <a href="Help.html">
+            <div>帮助</div>
+        </a>
+    </div>
+
+    <!--账户-->
+    <!--    <a href="#" title="登录账号" >-->
+    <div class="my-count-body" onclick="showDiv()" onclick="hideDiv()">
+        <img src="images/navigation/navigation_top/myself.png" alt="" style="width: 30px">
+        <h3 style="margin-left: 10px;color: white;">MICHEAL</h3>
+    </div>
+</div>
+<!--固定导航栏-->
+<div class="navigation_daohang_div">
+    <!--搜索框-->
+    <div class="search_input">
+        <img src="images/navigation/navigation_fixed/sousuo.png">
+        <input type='text' placeholder="搜索">
+    </div>
+
+    <div style="width: 80%;display: flex;justify-content: space-between;align-items: center;">
+
+        <div class="daohang_1">
+            <a href="index_Store.html" style="color: white;font-weight: 700">商城</a>
+            <a href="GameLibrary.html">游戏库</a>
+            <a href="Community.html">社区</a>
+            <a  style="color: rgb(24, 132, 253);cursor: pointer;" onclick="document.getElementById('advertise-body').style.display='block'">直播</a>
+        </div>
+
+        <div class="daohang_2">
+            <a href="HopeList.html">愿望清单</a>
+            <a href="ShopingCart.html">购物车</a>
+        </div>
+
+
+        <div class="daohang_3">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle navigation_dropdown" type="button"
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                    商城
+                </button>
+                <div class="dropdown-menu my_detail_dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="index_Store.html">商城</a>
+                    <a class="dropdown-item" href="GameLibrary.html">游戏库</a>
+                    <a class="dropdown-item" href="Community.html">社区</a>
+                    <a class="dropdown-item"  style="color: rgb(24, 132, 253);cursor: pointer;" onclick="document.getElementById('advertise-body').style.display='block'">直播</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="daohang_4">
+            <a href="HopeList.html"><img src="images/navigation/navigation_fixed/心愿单.svg" alt=""></a>
+            <a href="ShopingCart.html"><img src="images/navigation/navigation_fixed/购物车.svg" alt=""></a>
+        </div>
+
+
+    </div>
+
+</div>
+<!--public-->
+
+
+<!-- -->
+<!--内容-->
+<!-- -->
+<div class="store_content_div">
+
+    <!--轮播图与切换-->
+    <div class="Store_carousel_change_div">
+        <!--图片-->
+        <div class="carousel_div">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-interval="2500">
+                        <a href="Warn.html"><img src="images/GameStore/lunbotu_list/carousel_1.jpg"
+                                                 class="d-block w-100"
+                                                 alt="..."></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>2022年大特卖</h4>
+                            <p>购买优惠特价游戏时,使用大特卖优惠卷,省上再省25!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="2500">
+                        <a href="Warn.html"><img src="images/GameStore/lunbotu_list/carousel_2.jfif"
+                                                 class="d-block w-100" alt="..."></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>《永劫无间》特卖!</h4>
+                            <p>《永劫无间》是一款最多 60 人同台竞技的 PVP
+                                武侠风格动作战斗体验，内含以武术为蓝本的近战战斗，无视重力的机动性，大量近战及远程武器，以及可定制的身怀史诗级武艺的传奇英雄。</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="2500">
+                        <a href="Warn.html"><img src="images/GameStore/lunbotu_list/carousel_3.jpg"
+                                                 class="d-block w-100" alt="..."></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>《F1® 22》现已发售!</h4>
+                            <p>通过 2022 FIA Formula One World Championship™ 官方视频游戏——EA SPORTS™《F1® 22》，进入 Formula 1®
+                                新时代。</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="2500">
+                        <a href="Warn.html"><img src="images/GameStore/lunbotu_list/carousel_4.jpg"
+                                                 class="d-block w-100" alt="..."></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>《堡垒之夜》第 3 章 - 第 2 季</h4>
+                            <p>踏上装甲战斗巴士，成为强大力量，或将 Cow Catcher 加装于你的卡车之上，来获得额外的冲撞力度。在 Chapter 3 Season 2: Resistance
+                                中，加入夺取 Zero Point 的最终战斗，来挑战你的对手吧！</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="2500">
+                        <a href="Warn.html"><img src="images/GameStore/lunbotu_list/carousel_5.jfif"
+                                                 class="d-block w-100" alt="..."></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>《FINAL FANTASY VII》特卖!</h4>
+                            <p>身背毁灭剑的前神罗战士克劳德踏入魔晄都市米德加。 运用最先进技术制作的画面、融合战略性与直觉式动作操作的战斗系统—— 不朽名作《FINAL FANTASY
+                                VII》的世界重生为“全新故事”。</p>
+                        </div>
+                    </div>
+                </div>
+                <!--                <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">-->
+                <!--                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+                <!--                    <span class="sr-only">Previous</span>-->
+                <!--                </button>-->
+                <!--                <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">-->
+                <!--                    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+                <!--                    <span class="sr-only">Next</span>-->
+                <!--                </button>-->
+            </div>
+        </div>
+        <!--切换-->
+        <div class="Store_change_carousel">
+            <div class="carousel-indicators my_carousel-indicators">
+                <div data-target="#carouselExampleCaptions" class="active_change active_change_img"><img
+                        src="images/GameStore/lunbotu_list/carousel_change_1.jpg" alt="">
+                    <h5>2022大特卖</h5>
+                </div>
+                <div data-target="#carouselExampleCaptions" data-slide-to="1" class="active_change_img"><img
+                        src="images/GameStore/lunbotu_list/carousel_change_2.jfif" alt="">
+                    <h5>永劫无间</h5>
+                </div>
+                <div data-target="#carouselExampleCaptions" data-slide-to="2" class="active_change_img"><img
+                        src="images/GameStore/lunbotu_list/carousel_change_3.jpg" alt="">
+                    <h5> F1®2022</h5>
+                </div>
+                <div data-target="#carouselExampleCaptions" data-slide-to="3" class="active_change_img"><img
+                        src="images/GameStore/lunbotu_list/carousel_change_4.jpg" alt="">
+                    <h5>堡垒之夜</h5>
+                </div>
+                <div data-target="#carouselExampleCaptions" data-slide-to="4" class="active_change_img"><img
+                        src="images/GameStore/lunbotu_list/carousel_change_5.jpg" alt="">
+                    <h5>最终幻想</h5>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--特惠-->
+    <div class="tehui_div">
+        <h4>大特卖聚焦</h4>
+        <div class="tehui_content_div">
+
+            <div class="card">
+                <a href="Warn.html">
+                    <img
+                            src="images/GameStore/tehui/CG.2-1200x1600-6b8cbe5523543a3d16aa1d0aef8f188d.jpg"
+                            class="card-img-top" alt="...">
+                </a>
+                <div class="card-body">
+                    <h5>Cozy Grove</h5>
+                    <div class="card-button-price-body">
+                        <button>+购物车</button>
+                        <h6>￥25</h6></div>
+                </div>
+            </div>
+            <div class="card">
+                <a href="Warn.html">
+                    <img
+                            src="images/GameStore/tehui/EGS_AmnesiaRebirth_FrictionalGames_S2-1200x1600-06261861317a4d878f0391cbcf127a5a.jpg"
+                            class="card-img-top" alt="...">
+                    <span class="cover_span">
+                </span>
+                </a>
+                <div class="card-body">
+                    <h5>AmnesiaRebirth</h5>
+                    <div class="card-button-price-body">
+                        <button>+购物车</button>
+                        <h6>￥12</h6></div>
+
+                </div>
+            </div>
+            <div class="card">
+                <a href="Warn.html">
+                    <img
+                            src="images/GameStore/tehui/EGS_ARKSurvivalEvolved_StudioWildcard_S2-1200x1600-5b58fdefea9f885c7426e894a1034921.jpg"
+                            class="card-img-top" alt="...">
+                    <span class="cover_span">
+                </span>
+
+                </a>
+
+
+                <div class="card-body">
+                    <h5>SurvivalEvolved</h5>
+                    <div class="card-button-price-body">
+                        <button>+购物车</button>
+                        <h6>￥22</h6></div>
+
+                </div>
+            </div>
+            <div class="card">
+                <a href="Warn.html">
+                    <img
+                            src="images/GameStore/tehui/EGS_HITMANGameofTheYeardEdition_IOInteractiveAS_Bundles_S2-1200x1600-6add4f514900a2454ad226e6288df595.jpg"
+                            class="card-img-top" alt="...">
+                    <span class="cover_span">
+                </span>
+
+                </a>
+
+
+                <div class="card-body">
+                    <h5>HITMAN</h5>
+                    <div class="card-button-price-body">
+                        <button>+购物车</button>
+                        <h6>￥40</h6></div>
+
+                </div>
+            </div>
+            <div class="card">
+                <a href="Warn.html">
+                    <img
+                            src="images/GameStore/tehui/EGS_HundredDaysWinemakingSimulatorDEMO_BrokenArmsGames_Demo_S2-1200x1600-35531ec1fa868e3876fac76471a24017.jpg"
+                            class="card-img-top" alt="...">
+                    <span class="cover_span">
+                </span>
+
+                </a>
+
+
+                <div class="card-body">
+                    <h5>Hundred Days</h5>
+                    <div class="card-button-price-body">
+                        <button>+购物车</button>
+                        <h6>￥5</h6></div>
+
+                </div>
+            </div>
+            <div class="card">
+                <a href="Warn.html">
+                    <img
+                            src="images/GameStore/tehui/EGS_StarTrekOnline_CrypticStudios_S2-1200x1600-c7dacb2bf4d8f76ce25d5c2226238a8a.jpg"
+                            class="card-img-top" alt="...">
+                    <span class="cover_span">
+                </span>
+
+                </a>
+
+
+                <div class="card-body">
+                    <h5>StarTrek Online</h5>
+                    <div class="card-button-price-body">
+                        <button>+购物车</button>
+                        <h6>￥52</h6></div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--免费游戏-->
+    <div class="freegmae-body">
+        <div class="freegmae-title-body">
+            <img src="images/GameStore/icon/礼物.svg" alt="">
+            <h4>免费游戏</h4>
+        </div>
+        <!--图片与时间-->
+        <div class="freegmae-con-body">
+            <div class="freegmae-con-img">
+                <a href="Warn.html"><img src="images/GameStore/free-game/free-2.jpg" alt=""></a>
+                <!--                <div class="cover-img-freegame"></div>-->
+                <div class="xianzaimianfei">
+                    现在免费
+                </div>
+                <!--时间-->
+                <div class="freegmae-con-time-1">
+                    <h4>艾尔登法环</h4>
+                    当前免费，<span id="time2"></span>
+                    <h5></h5>
+                </div>
+
+            </div>
+
+
+            <div class="freegmae-con-img">
+                <a href="#"><img src="images/GameStore/free-game/free-1.jpg" alt=""></a>
+                <!--                <div class="cover-img-freegame"></div>-->
+                <div class="shenmiyouxi">
+                    神秘游戏
+                </div>
+                <div class="freegmae-con-time-2">
+                    <!--                    <span id="time1"></span>-->
+                    <span id="time3"></span>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!--底部信息-->
+<div class="bottom-information-body">
+    <!--title-->
+    <div style="width: 100%;display: flex;justify-content: space-between;">
+        <div class="title-img">
+            <img style="padding-right: 10px;" src="images/bottom-information/QQ_tencent-qq.svg" alt="">
+            <img style="padding-right: 10px;" src="images/bottom-information/wechat.svg" alt="">
+            <img style="padding-right: 10px;" src="images/bottom-information/weibo.svg" alt="">
+        </div>
+        <div class="to-top">
+            <a href="#top"><img style="width: 40px;" src="images/bottom-information/to-top.svg" alt="回到顶部" title="回到顶部"></a>
+        </div>
+
+    </div>
+
+    <!--信息-->
+    <div class="lianxi-body">
+        <!--开发联系方式-->
+        <div>
+            <h4 style="color: #8d8d8d;font-size: 0.9em;">开发者信息</h4>
+            <div style="display: flex;">
+                <div class="lieming">
+                    <h4>name：</h4>
+
+                </div>
+                <div class="lianxi-information">
+                    <h4>Zheng Haoyang</h4>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!--资源-->
+        <div style="padding-top: 30px;border-bottom: 1px #505050 solid;padding-bottom: 30px">
+            <h4 style="color: #8d8d8d;font-size: 0.9em;">资源</h4>
+            <div style="display: flex;">
+                <div class="ziyuan-body">
+                    <a href="https://www.epicgames.com/affiliate/en-US/overview">创作者支持计划</a>
+                    <a href="https://store.epicgames.com/zh-CN/publish">在BG Game上分发布</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/careers">职业</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/about">公司</a>
+                    <a href="https://store.epicgames.com/zh-CN/eula">授权协议</a>
+                </div>
+                <div class="ziyuan-body" style="padding-left: 30px">
+                    <a href="https://dev.epicgames.com/zh-CN/home">在线服务</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/community-rules">社区守则</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/ux">用户体验调查</a>
+                    <a href="https://www.epicgames.com/site/zh-CN/fan-art-policy">爱好者作品政策</a>
+                </div>
+            </div>
+        </div>
+
+        <!--服务条款 隐私政策 商店政策-->
+        <div style="display: flex;justify-content: space-between;align-items: center">
+            <div class="bottom-information-end-body">
+                <a href="https://www.epicgames.com/site/zh-CN/tos">隐私条款</a>
+                <a style="padding-left: 15px;" href="https://www.epicgames.com/site/zh-CN/privacypolicy">隐私政策</a>
+                <a style="padding-left: 15px;"
+                   href="https://www.epicgames.com/site/zh-CN/store-refund-policy">商店退款政策</a>
+            </div>
+            <div class="bottom-information-img">
+                <img src="images/navigation/navigation_top/icon_shangbiao2.png" alt="">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+
+    // 注册判断
+    function check_register() {
+        var re_emailPat = /^(.+)@(.+)$/;
+        var re_emailStr = register_form.register_email.value;
+        if (!re_emailStr.match(re_emailPat)) {
+            alert("电子邮件地址必须包括 ( @ 和 . )");
+            register_form.register_email.focus();
+            return;
+        } else if (register_form.register_password.value == "") {
+            alert("密码不能为空");
+            register_form.register_password.focus();
+            return;
+        } else {
+            register_form.submit();
+        }
+    }
+
+    //登录判断
+    function check_join() {
+        var jo_emailStr = join_form.join_email.value;
+        var jo_password = join_form.join_password.value;
+        var emailPat = /^(.+)@(.+)$/;
+        if (!jo_emailStr.match(emailPat)) {
+            alert("请输入正确的电子邮件地址，必须包括 ( @ 和 . )");
+            join_form.join_email.focus();
+            return;
+        } else if (jo_password == "") {
+            alert("请输入您的密码！");
+            join_form.join_password.focus();
+            return;
+        } else {
+            register_form.submit();
+        }
+    }
+
+
+    // 验证密码强度S
+    // 有小写字母，数字，其他字符，级别+1
+    var inp1 = document.getElementById("register_password");
+    var strength = document.getElementById("strength");
+    var strengthLevel = document.getElementById("strengthLevel");
+    var arr = ["", "低", "中", "高"];
+    inp1.onkeyup = function () {
+        // 获取用户输入内容
+        // 记录安全级别
+        var level = 0;
+        // 正则表达式判断输入的东西
+        // 小写字母，级别+1
+        if (/[a-z]/.test(this.value)) {
+            level++;
+        }
+        // 数字+1
+        if (/[0-9]/.test(this.value)) {
+            level++;
+        }
+        // 其他+1
+        if (/[^a-z0-9]/.test(this.value)) {
+            level++;
+        }
+        strength.innerHTML = arr[level];
+        strengthLevel.className = "strengthLv" + level;
+    };
+    // 验证密码强度E
+
+
+    <!--切换js-->
+    var $active_change_click = $(' .my_carousel-indicators');
+    $active_change_click.each(function (index) {
+        $('.carousel').on('slide.bs.carousel', function () {
+
+            $('.active_change').removeClass('active_change')
+                .next().addClass('active_change');
+            // console.log($('.active_change').next());
+            if ($('.active_change').length == 0) {
+                $('.my_carousel-indicators div:nth-child(1)').addClass('active_change')
+            }
+        })
+
+        $('.my_carousel-indicators div').on('click', function () {
+            $(this).prev().addClass('active_change')
+                .siblings().removeClass('active_change');
+        })
+    })
+
+
+</script>
+</body>
+
+</body>
+</html>

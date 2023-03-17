@@ -1,0 +1,298 @@
+/* */
+/* */
+/*游戏详情 */
+/* */
+/**/
+
+/*最wai*/
+.GameDetail-body {
+    /*display: flex;*/
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    /*border: 1px solid #ffffff;*/
+}
+
+
+/*标题*/
+.detail-title {
+    padding: 20px;
+}
+
+.detail-title > h3 {
+    color: white;
+    font-size: 2.5em;
+}
+
+
+/*左内容*/
+.zuo-content-body {
+    width: 100%;
+    height: auto;
+    /*display: flex;*/
+}
+
+/*轮播与切换*/
+.detail-carousel {
+    width: 100%;
+}
+
+.carousel-item video {
+    width: 100%;
+    display: block;
+    background-color: rgb(15, 15, 15);
+}
+
+/*切换*/
+.my-carousel-control {
+
+    width: 100%;
+    height: auto;
+    /*display: flex;*/
+    /*white-space: nowrap; !* ul中的内容不换行 *!*/
+    /*overflow-x: scroll;  !* 横向滚动 *!*/
+    /*overflow-y: hidden; !* 禁止纵向滚动*!*/
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/*设置每一个控制图片*/
+.carousel-change-img {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    /*padding: 1px;*/
+    /*width: 200px;*/
+    /*border: 1px #00ff2c solid;*/
+}
+
+.carousel-change-img img {
+
+    width: auto;
+    height: auto;
+    opacity: 0.7;
+}
+
+.carousel-change-img img:hover {
+    opacity: 1;
+}
+
+/*配置*/
+/*配置标题 WINDOWS body*/
+.detail-content-biaoti {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    border-bottom: 1px #4c4c4c solid;
+
+}
+
+/*关注我们*/
+.guanzhuwomen {
+    display: flex;
+    justify-content: center;
+    background-color: #2d2d2d;
+    border-radius: 2px;
+    padding: 30px;
+}
+.guanzhuwomen img{
+    transition: all 0.3s;
+    margin: 10px;
+    width: 30px;
+    opacity:0.6;
+}
+.guanzhuwomen img:hover{
+    opacity: 1;
+    transition: all 0.3s;
+    transform: scale(1.07, 1.07);
+}
+
+
+/*右边内容*/
+.GameDetail-price-body {
+    z-index: 887;
+    position: sticky;
+    top: 50px;
+    padding-left: 40px;
+    /*padding-right: 20px;*/
+    width: 500px;
+    height: 1000px;
+    /*border: 1px red solid;*/
+}
+
+/*购买*/
+.detail-buy-body {
+    transition: all 0.2s;
+    margin-top: 7px;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 17px;
+    background-color: rgb(24, 132, 253);
+    font-size: 0.9em;
+    color: white;
+    border-radius: 7px;
+}
+
+.detail-buy-body:hover {
+    background-color: rgb(80, 154, 253);
+}
+
+/*购物车*/
+.detail-gouwuche-body {
+    transition: all 0.2s;
+    margin-top: 9px;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 17px;
+    font-size: 0.9em;
+    color: white;
+    border-radius: 7px;
+    border: 1px #a8a8a8 solid;
+}
+
+.detail-gouwuche-body:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+/*加入愿望清单*/
+.detail-hope-body {
+    transition: all 0.2s;
+    margin-top: 9px;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+
+    border-radius: 7px;
+    border: 1px #a8a8a8 solid;
+}
+
+.detail-hope-body h4 {
+    font-size: 0.9em;
+    color: white;
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.detail-hope-body img {
+    height: 20px;
+}
+
+.detail-hope-body:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+/*开发商*/
+.detail-game-information {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px #4c4c4c solid;
+    font-size: 0.9em;
+}
+
+
+/*介绍*/
+.detail-jieshao-body {
+    width: 100%;
+    height: auto;
+    /*border: 1px solid #ffffff;*/
+}
+
+@media screen and (max-width: 10000px) {
+    .detail-jieshao-body > h4 {
+        color: white;
+        font-size: 1.2em;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .detail-jieshao-body > h4 {
+        color: white;
+        font-size: 1em;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+
+/*响应*/
+.content-max-5000{
+    width: 100%;display: flex; height: auto;
+}
+
+
+
+
+
+/*当小于700时出现的效果*/
+.content-max-700{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    /*.detail-carousel{*/
+    /*    display: none;*/
+    /*}*/
+    /*.GameDetail-price-body{*/
+    /*    width: 100%;*/
+    /*}*/
+    /*新内容出现*/
+    .content-max-700{
+        display: block;
+    }
+    /*原左边内容出现*/
+    .content-max-5000{
+        display: none;
+    }
+    /*重设价格框宽度等*/
+    .GameDetail-price-body{
+        width: 100%;
+        position: relative;
+        /*top: 50px;*/
+        height: auto;
+        padding-left: 0px;
+    }
+    /*游戏介绍消失*/
+    .detail-jieshao-body{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

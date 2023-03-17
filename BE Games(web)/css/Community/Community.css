@@ -1,0 +1,380 @@
+/* */
+/* */
+/*社区*/
+/* */
+/* */
+
+/*body*/
+.community_content_div {
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    /*border: 1px solid red;*/
+}
+
+
+/*标题*/
+.community-title-div {
+    width: 100%;
+    height: auto;
+}
+
+.community-title-div h2 {
+    color: white;
+    font-size: 2.3em;
+    font-weight: 600;
+}
+
+.community-title-div h3 {
+    padding-top: 0;
+    color: #747474;
+    font-size: 1em;
+}
+
+
+/*搜索与活动*/
+.community-search-news-body {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 4px;
+}
+
+/*内容*/
+.news-body {
+    display: flex;
+    width: 100%;
+    height: auto;
+    /*border: 1px red solid;*/
+}
+
+/*新闻图片内容*/
+.news-body-1 {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: auto;
+}
+
+.news-body-1-max700 {
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px #4c4c4c solid;
+}
+
+.news-body-1-max700 div img {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.news-body-1-max700 div img:hover {
+    opacity: 0.7;
+}
+
+.news-body-1-max700 a {
+    color: #4e4e4e;
+}
+
+
+.news-body-1 div img {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.news-body-1 div img:hover {
+    opacity: 0.7;
+}
+
+.news-body-1 a {
+    color: #4e4e4e;
+}
+
+/*搜索*/
+.news-body-2 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-left: 30px;
+    width: 30%;
+    height: auto;
+}
+
+/* 搜索框 */
+.news-search-input {
+    width: 100%;
+    /*min-width: 150px;*/
+    height: 35px;
+    /*margin-left: 5%;*/
+    border-radius: 5px;
+    display: flex;
+    /* background-color: rgb(206, 38, 38); */
+    background-color: rgb(59, 59, 59);
+}
+
+.news-search-input img {
+    transform: scale(0.8, 0.8);
+    height: 100%;
+}
+
+.news-search-input input[type="text"] {
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 600;
+    outline: 0;
+    color: rgb(247, 247, 247);
+    border-radius: 18px;
+    border: 0px;
+    background-color: rgb(59, 59, 59);
+}
+
+
+/*内容*/
+/*1*/
+.community-content-1-body {
+    /*border: 1px red solid;*/
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/*图片*/
+.content-1-body {
+    padding: 10px;
+    display: flex;
+    width: 50%;
+    border: 1px rgb(15, 15, 15) solid;
+}
+
+.content-1-body:hover {
+    box-sizing: border-box;
+    border: 1px #808080 solid;
+}
+
+.content-1-zuo-img {
+    width: 40%;
+}
+
+.content-1-zuo-img > img {
+    width: 100%;
+}
+
+.content-1-you-text {
+    padding-right: 10px;
+    width: 59%;
+    margin-left: 1%;
+}
+
+/*欢乐*/
+.huanle-jiazhi-body h6 {
+    color: #929292;
+    font-size: 1em;
+}
+
+
+/*赞*/
+.zan-tuijina-body {
+    display: flex;
+    /*border: 1px white solid;*/
+    align-items: center;
+}
+
+/*赞图片icon*/
+.zan-img {
+    display: flex;
+}
+
+.zan-img > img {
+    align-items: center;
+    width: 50px;
+}
+
+
+
+
+.content-1-text-content h6 {
+    padding-top: 10px;
+    color: #bb6f02;
+    font-size: 0.6em;
+}
+
+.content-1-text-content h4 {
+    color: white;
+    font-size: 0.8em;
+}
+
+
+/*内容2*/
+.community-content-2-body {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px rgb(15, 15, 15) solid;
+}
+
+.community-content-2-body:hover {
+    border: 1px #808080 solid;
+}
+
+.con2-title > h1 {
+    color: #acacac;
+    font-size: 1.5em;
+}
+
+
+.tuijian-name {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.tuijian-name > h3 {
+    margin: 0;
+    color: #acacac;
+    font-size: 1.3em;
+    padding-left: 15px;
+}
+
+/*图片*/
+.content-2-img {
+    width: 100%;
+}
+
+.con2-zan-img {
+    display: flex;
+}
+
+.con2-zan-img > img {
+    align-items: center;
+    width: 40px;
+    padding: 0;
+}
+
+
+.content-2-img > img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.con-2-zan-tuijina-body {
+    display: flex;
+    /*border: 1px white solid;*/
+    align-items: center;
+
+}
+/*}赞text*/
+.zan-text h6 {
+    color: white;
+    font-size: 0.5em;
+    margin: 0;
+    align-items: center;
+}
+
+/*评论*/
+.shashizhen-pinglun {
+    margin-top: 5px;
+    width: 100%;
+    overflow-y: scroll;
+    color: #b1b1b1;
+    font-size: 0.9em;
+
+}
+
+.shashizhen-pinglun::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+}
+
+/*轨道*/
+.shashizhen-pinglun::-webkit-scrollbar-track {
+    background-color: #5e5e5e;
+}
+
+/*滑块*/
+.shashizhen-pinglun::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #efefef;
+}
+
+
+
+
+
+@media screen and (max-width: 5000px){
+    .shashizhen-pinglun{
+        max-height: 230px;
+    }
+}
+@media screen and (max-width: 1300px){
+    .shashizhen-pinglun{
+        max-height: 200px;
+    }
+}
+
+
+
+@media screen and (max-width: 1100px) {
+    .shashizhen-pinglun{
+        max-height: 170px;
+    }
+    .content-1-text-content > h6 {
+        font-size: 0.2em;
+    }
+
+    .content-1-text-content > h4 {
+        font-size: 0.4em;
+    }
+
+    .huanle-jiazhi-body > h6 {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .shashizhen-pinglun{
+        max-height: 130px;
+    }
+    .huanle-jiazhi-body {
+        display: none;
+    }
+
+    .zan-tuijina-body {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .shashizhen-pinglun{
+        max-height: 80px;
+    }
+
+    .community-content-1-body {
+        margin-top: 15px;
+    }
+    .news-body-1 {
+        display: none;
+    }
+
+    .news-body-2 {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .news-body {
+        display: block;
+    }
+
+    .news-body-1-max700 {
+        display: flex;
+    }
+}
+
+
+
