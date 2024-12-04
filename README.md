@@ -1,4 +1,5 @@
 # 模仿Epic游戏商城的一个前端项目
+模仿Web端项目在[此链接](https://github.com/zhenghaoyang24/epic-client-imitation)
 ### 项目截图
 ![image](https://github.com/zhenghaoyang24/Epic-imitation/assets/95458562/dc3f2bba-be3c-4b2a-91ea-c272d8002f4b)
 ![image](https://github.com/zhenghaoyang24/Epic-imitation/assets/95458562/5c57f987-13f9-4752-a629-8cd0a65d8b6b)
